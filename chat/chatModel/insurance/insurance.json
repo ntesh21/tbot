@@ -1,0 +1,599 @@
+ {"intents": [
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["what is the name of your insurance company"],
+    "reply": ["It’s UNK"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["where are your insurance company branches?"],
+    "reply": ["we currently have our insurance company in a,b,c"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["when can I visit one of your insurance offices?"],
+    "reply": ["you can visit between 10p.m to 5p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["when are you guys available for service"],
+    "reply": ["we are available between 10p.m to 5p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["what insurance services do you offer"],
+    "reply": ["we cover fire insurance,accidental insurance,medical insurance, and so on"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["tell me about your insurance policies"],
+    "reply": ["we provide fire,accidental, medical insurance"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["tell me about medical insurance"],
+    "reply": ["we do proivide medical insurance."]
+  },
+  {
+    "category": "insurance",
+    "intention": "installment",
+    "query": ["what is the insurance premium for medical insurance of x"],
+    "reply": ["you have to pay y per month"]
+  },
+  {
+    "category": "insurance",
+    "intention": "installment",
+    "query": ["tell me about medical insurance installments"],
+    "reply": ["you have to pay y per month"]
+  },
+  {
+    "category": "insurance",
+    "intention": "installment",
+    "query": ["tell me about accidental insurance"],
+    "reply": ["you have to pay y per month"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["give me the contact number of one of your agent"],
+    "reply": ["you can contact mr. xyz. His contact information is 1234567891"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["what is the contact info of your insurance office"],
+    "reply": ["contact information of our insurance office is 12345899"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["do you have your office around k sta"],
+    "reply": ["yes we do have our service made available in y state at z"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["where can I find your office in k state"],
+    "reply": ["yes we do have our service made available in y state at z"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["working days of your company?"],
+    "reply": ["we work 6 days a week except for sunday."]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["what offers do you offer for your insurance policy"],
+    "reply": ["It’s UNK"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["where are your resturants situated?"],
+    "reply": ["we currently have our service made availble in a,b,c"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["do your company covers medical insurance"],
+    "reply": ["yes we do have medical insurance that will cover it"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["do your company covers health insurance"],
+    "reply": ["yes we do have medical insurance that will cover it"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["do your company covers accidental insurance"],
+    "reply": ["yes we do have medical insurance that will cover it"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["do your company covers damage done by natural calamities"],
+    "reply": ["I am not sure of it"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["how can I contact your office"],
+    "reply": ["our phone number is 123"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["what is your email address"],
+    "reply": ["it’s abc@gmail.com"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["give me your telephone number of your office"],
+    "reply": ["contact us on 123456"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["are you open on sunday"],
+    "reply": ["we are closed on sunday"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["are you open on monday"],
+    "reply": ["yes we are open"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["can I visit your salon during x time?"],
+    "reply": ["you can visit us during 10 a.m to 5 p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["I want to visit you ,tell me when can I visit"],
+    "reply": ["we are working during 10 a.m to 5 p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "types of service",
+    "query": ["do you have vehicle insurance policy"],
+    "reply": ["yes we do have vehicle insurance"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["can you send an agent to my location"],
+    "reply": ["you can call our office and provide us with your location details"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["what’s your active contact"],
+    "reply": ["iyou can contact us on 1346589"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["when are your agents available to us"],
+    "reply": ["available between 10 a.m to 5 p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["give me  email address of your insurance company"],
+    "reply": ["it’s abc@gmail.com"]
+  },
+  {
+    "category": "salon",
+    "intention": "general information",
+    "query": ["what is the name of your salon?"],
+    "reply": ["our salon is named as xyz salon"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["where is this salon situated?"],
+    "reply": ["it is situated in xyz"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["when is this salon open"],
+    "reply": ["it is open form 10 a.m to 4 p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["is it for gents or ladies?"],
+    "reply": ["we provide service for both ladies and gents"]
+  },
+  {
+    "category": "salon",
+    "intention": "working hour",
+    "query": ["can I visit your salon during 2 p.m this week"],
+    "reply": ["we are available between 10p.m to 5p.m. visit us during working hours"]
+  },
+  {
+    "category": "salon",
+    "intention": "type of service",
+    "query": ["do you serve as a beauty parlour too?"],
+    "reply": ["No"]
+  },
+  {
+    "category": "salon",
+    "intention": "type of service",
+    "query": ["what service do you provide?"],
+    "reply": ["we provide haircut ,hair conditioning etc service to both ladies and gents"]
+  },
+  {
+    "category": "salon",
+    "intention": "working hour",
+    "query": ["can I visit you on sunday?"],
+    "reply": ["we are working 6 days a week except sunday. You can visit any day except sunday"]
+  },
+  {
+    "category": "salon",
+    "intention": "contact",
+    "query": ["what is the contact information of your salon"],
+    "reply": ["it’s 123345"]
+  },
+  {
+    "category": "salon",
+    "intention": "contact",
+    "query": ["what is the booking procedure?"],
+    "reply": ["you can contact any one at our office"]
+  },
+  {
+    "category": "salon",
+    "intention": "general information",
+    "query": ["where are your branches of your salon"],
+    "reply": ["we have our branch at x,y,z"]
+  },
+  {
+    "category": "salon",
+    "intention": "general information",
+    "query": ["what are your rates?"],
+    "reply": ["rates are k100,2000,3000 for a,b,c haircut"]
+  },
+  {
+    "category": "salon",
+    "intention": "general information",
+    "query": ["tell me more about your salon"],
+    "reply": ["we have our salon at x,y,z. We have 10 employee at each brach"]
+  },
+  {
+    "category": "salon",
+    "intention": "contact",
+    "query": ["can I get the appointment with the employee"],
+    "reply": ["you can visit any time on any other day."]
+  },
+  {
+    "category": "salon",
+    "intention": "general information",
+    "query": ["can you telll me about your nearest salon in state y"],
+    "reply": ["we have one  in stree1"]
+  },
+  {
+    "category": "insurance",
+    "intention": "types of service",
+    "query": ["do you provide head massage in your salon"],
+    "reply": ["we do provide head message"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["what service do you provide in your salon"],
+    "reply": ["we provide various services like head message,hair cut,hair conditioning ,etc"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["can I contact the employee of salon"],
+    "reply": ["you can call at 12345"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["can I get to prebook the service"],
+    "reply": "yes you can ,call at 12456"
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["who is the best employee at your salon"],
+    "reply": ["I am not sure of it"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["what is the best time to visit the salon, so that I don’t have to wait."],
+    "reply": ["any working hour"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["how many working staffs are there at your salon"],
+    "reply": ["may be 10  people currently"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["when do I visit the salon"],
+    "reply": ["during our working hour 10 am to 5pm"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["tell me about the rates of hair cut in your salon"],
+    "reply": ["the rates are 100,200"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["are you open during public holidays"],
+    "reply": ["we are open during non public holidays only"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["how can I contact your salon"],
+    "reply": ["our numbers are 123456"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["does your insurance company covers the damage done by natural calmities"],
+    "reply": ["No"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["do you have your insurance office around k state"],
+    "reply": ["I am not sure of it"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["can your agent visit me at 5p.m"],
+    "reply": ["we are available between 10p.m to 5p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["can your agent visit me at 4p.m"],
+    "reply": ["we are available between 10p.m to 5p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["where is the your nearest office around gg state"],
+    "reply": ["its in k near y"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["tell me about your nearest office around gg state"],
+    "reply": ["its in k near y"]
+  },
+  {
+    "category": "insurance",
+    "intention": "installment",
+    "query": ["what is the amount of installment that I have to pay for the life insurance of 100000"],
+    "reply": ["may be 3% of that amount"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["do you guys provide life insurance"],
+    "reply": ["yes we do."]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["is there provision for life insurance"],
+    "reply": ["yes we do"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["do you guys provide health insurance"],
+    "reply": ["yes we do"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["what are your working hours"],
+    "reply": ["we are available between 10p.m to 5p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["where can I find your insurance offices"],
+    "reply": ["we are available in x,yx, state"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["please provide me with the number of one of your insurance agent"],
+    "reply": ["here you go 98955445"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["can you provide me with the number of your insuance agent"],
+    "reply": ["here you go 98955445"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["is your office open on sunday?"],
+    "reply": ["we are available six days a week except sunday"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["is your office open on tuesday?"],
+    "reply": ["we are available six days a week except sunday"]
+  },
+  {
+    "category": "insurance",
+    "intention": "installment",
+    "query": ["tell me about your installment scheme"],
+    "reply": ["you can call at 12345"]
+  },
+  {
+    "category": "insurance",
+    "intention": "types of service",
+    "query": ["what services do you offer for your clients ?"],
+    "reply": ["we provide fire,accidental, medical insurance"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["provide me the information of your insurance company"],
+    "reply": ["Name of the company is xyz,availbale service all insurance s,ys,z"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["provide me the name of your insurance company"],
+    "reply": ["Name of the company is xyz,availbale service all insurance s,ys,z"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["how many agents currently working at your insurance company"],
+    "reply": ["we have 1400 active agents"]
+  },
+  {
+    "category": "insurance",
+    "intention": "installment",
+    "query": ["how much do I have to pay on monthly basis for the fire insurance as a installment"],
+    "reply": ["Call 13456 for information on insurance premium"]
+  },
+  {
+    "category": "insurance",
+    "intention": "installment",
+    "query": ["how much do I have to pay on monthly basis for the health insurance as a installment"],
+    "reply": ["Call 13456 for information on insurance premium"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["is your insurance company open during 3 p.m"],
+    "reply": ["we are available between 10p.m to 5p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["is your insurance company open during 2 p.m"],
+    "reply": ["we are available between 10p.m to 5p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "working hour",
+    "query": ["when is your company open"],
+    "reply": ["we are available between 10p.m to 5p.m"]
+  },
+  {
+    "category": "insurance",
+    "intention": "types of service",
+    "query": ["do I get vehicle insurance"],
+    "reply":["we provide fire,accidental, medical insurance,vehicle insurance"]
+  },
+  {
+    "category": "insurance",
+    "intention": "types of service",
+    "query": ["I want to know if you provide fire insurance"],
+    "reply": ["we provide fire,accidental, medical insurance"]
+  },
+  {
+    "category": "insurance",
+    "intention": "type of service",
+    "query": ["I was wondering if you provide life insurance"],
+    "reply": ["we provide fire,accidental, medical insurance,vehicle insurance and life insurance too"]
+  },
+  {
+    "category": "insurance",
+    "intention": "types of service",
+    "query": ["please provide me the information about accidental insurance"],
+    "reply": ["we provide fire,accidental, medical insurance"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["provide me the contact information of one of your insurance agent"],
+    "reply": ["here you go 98955445"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["provide me the information about your terms and conditions"],
+    "reply": ["you can call at 12345"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["help we with the terms and condition"],
+    "reply": ["you can call at 12345"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["can you provide me the name of your insurance company"],
+    "reply":["Name of the company is xyz,availbale service all insurance s,ys,z"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["can you provide the contact information of one of your agent"],
+    "reply": ["Its 152458"]
+  },
+  {
+    "category": "insurance",
+    "intention": "general information",
+    "query": ["what are the eligibility criteria to apply for the insurance"],
+    "reply": ["you can call at 12345"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["give me the contact information of your insurance officce"],
+    "reply": ["Its 152458"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["give me the contact number of your insurance office"],
+    "reply": ["Its 152458"]
+  },
+  {
+    "category": "insurance",
+    "intention": "contact",
+    "query": ["can you provide me the detail information about your insurance company"],
+    "reply": ["you can call at 12345"]
+  },
+  {
+    "category": "insurance",
+    "intention": "installment",
+    "query": ["how should I pay for the installment"],
+    "reply": ["you can pay by cheque"]
+  }
+]
+}
+
+

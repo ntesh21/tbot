@@ -1,0 +1,449 @@
+  {"intents": [
+  
+  {
+    "category": "restaurant",
+    "intention": "greeting",
+    "query": ["Hey", "What's up", "Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+    "reply": ["Hi there, how can I help?"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "goodbye",
+    "query": ["Bye", "See you later", "Goodbye", "I am leaving"],
+    "reply": ["See you later, thanks for visiting"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "thanks",
+    "query": ["Thanks", "Thank you", "That's helpful"],
+    "reply": ["Happy to help, Any time!"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Information",
+    "query": ["Tell me about the restaurent"],
+    "reply": ["We are the largest chain of the restaurants including greatly in appearance and offerings, including a wide variety of cuisines and service models ranging from inexpensive fast food restaurants and cafeterias to mid-priced family restaurants, to high-priced luxury establishments."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Information",
+    "query": ["How good are you"],
+    "reply": ["We are the largest chain of the restaurants including greatly in appearance and offerings, including a wide variety of cuisines and service models ranging from inexpensive fast food restaurants and cafeterias to mid-priced family restaurants, to high-priced luxury establishments."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Information",
+    "query":["Please provide the details about restaurant"],
+    "reply":["We are the largest chain of the restaurants including greatly in appearance and offerings, including a wide variety of cuisines and service models ranging from inexpensive fast food restaurants and cafeterias to mid-priced family restaurants, to high-priced luxury establishments."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Information",
+    "query":["i need to know about restaurants"],
+    "reply":["We are the largest chain of the restaurants including greatly in appearance and offerings, including a wide variety of cuisines and service models ranging from inexpensive fast food restaurants and cafeterias to mid-priced family restaurants, to high-priced luxury establishments."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Information",
+    "query":["provide the information about the restaurants"],
+    "reply":["We are the largest chain of the restaurants including greatly in appearance and offerings, including a wide variety of cuisines and service models ranging from inexpensive fast food restaurants and cafeterias to mid-priced family restaurants, to high-priced luxury establishments."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Information",
+    "query":["provide the details about the restaurants"],
+    "reply":["We are the largest chain of the restaurants including greatly in appearance and offerings, including a wide variety of cuisines and service models ranging from inexpensive fast food restaurants and cafeterias to mid-priced family restaurants, to high-priced luxury establishments."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Services",
+    "query":["What services do you provide"],
+    "reply":["We provide excellent services and hospitality. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services, and some offer only take-out and delivery."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Services",
+    "query":["What are your services"],
+    "reply":["We provide excellent services and hospitality. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services, and some offer only take-out and delivery."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Services",
+    "query":["Tell me about the services"],
+    "reply":["We provide excellent services and hospitality. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services, and some offer only take-out and delivery."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Services",
+    "query":["Can I know about  the services"],
+    "reply":["We provide excellent services and hospitality. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services, and some offer only take-out and delivery."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Services",
+    "query":["what sort of services does the restaurants provide"],
+    "reply":["We provide excellent services and hospitality. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services, and some offer only take-out and delivery."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Services",
+    "query":["What do you offer"],
+    "reply":["We provide excellent services and hospitality. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services, and some offer only take-out and delivery."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Services",
+    "query":["what services do your customer get"],
+    "reply":["We provide excellent services and hospitality. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services, and some offer only take-out and delivery."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Services",
+    "query":["how is the service at the restaurants"],
+    "reply":["We provide excellent services and hospitality. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services, and some offer only take-out and delivery."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Services",
+    "query":["what are your services"],
+    "reply":["We provide excellent services and hospitality. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services, and some offer only take-out and delivery."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Services",
+    "query":["Do the restaurants provide quality services"],
+    "reply":["We provide excellent services and hospitality. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services, and some offer only take-out and delivery."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Attraction",
+    "query":["What are the main attractions of your restaurents"],
+    "reply":["The primary factors are usually the food itself (e.g. vegetarian, seafood, steak); the cuisine (e.g. Italian, Chinese, Japanese, Indian, French, Mexican, Thai) or the style of offering (e.g. tapas bar, a sushi train, a tastet restaurant, a buffet restaurant or a yum cha restaurant). Beyond this, restaurants may differentiate themselves on factors including speed (see fast food), formality, location, cost, service, or novelty themes (such as automated restaurants)"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Attraction",
+    "query":["What is the main things about your restaurants"],
+    "reply":["The primary factors are usually the food itself (e.g. vegetarian, seafood, steak); the cuisine (e.g. Italian, Chinese, Japanese, Indian, French, Mexican, Thai) or the style of offering (e.g. tapas bar, a sushi train, a tastet restaurant, a buffet restaurant or a yum cha restaurant). Beyond this, restaurants may differentiate themselves on factors including speed (see fast food), formality, location, cost, service, or novelty themes (such as automated restaurants)"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Attraction",
+    "query":["What sort of attraction does your restaurants provide"],
+    "reply":["The primary factors are usually the food itself (e.g. vegetarian, seafood, steak); the cuisine (e.g. Italian, Chinese, Japanese, Indian, French, Mexican, Thai) or the style of offering (e.g. tapas bar, a sushi train, a tastet restaurant, a buffet restaurant or a yum cha restaurant). Beyond this, restaurants may differentiate themselves on factors including speed (see fast food), formality, location, cost, service, or novelty themes (such as automated restaurants)"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Attraction",
+    "query":["what arttracts the customers to your restaurants"],
+    "reply":["The primary factors are usually the food itself (e.g. vegetarian, seafood, steak); the cuisine (e.g. Italian, Chinese, Japanese, Indian, French, Mexican, Thai) or the style of offering (e.g. tapas bar, a sushi train, a tastet restaurant, a buffet restaurant or a yum cha restaurant). Beyond this, restaurants may differentiate themselves on factors including speed (see fast food), formality, location, cost, service, or novelty themes (such as automated restaurants)"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Attraction",
+    "query":["why should i come to your restaurants"],
+    "reply":["The primary factors are usually the food itself (e.g. vegetarian, seafood, steak); the cuisine (e.g. Italian, Chinese, Japanese, Indian, French, Mexican, Thai) or the style of offering (e.g. tapas bar, a sushi train, a tastet restaurant, a buffet restaurant or a yum cha restaurant). Beyond this, restaurants may differentiate themselves on factors including speed (see fast food), formality, location, cost, service, or novelty themes (such as automated restaurants)"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Attraction",
+    "query":["what is the main reason to come to restaurants"],
+    "reply":["The primary factors are usually the food itself (e.g. vegetarian, seafood, steak); the cuisine (e.g. Italian, Chinese, Japanese, Indian, French, Mexican, Thai) or the style of offering (e.g. tapas bar, a sushi train, a tastet restaurant, a buffet restaurant or a yum cha restaurant). Beyond this, restaurants may differentiate themselves on factors including speed (see fast food), formality, location, cost, service, or novelty themes (such as automated restaurants)"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Attraction",
+    "query":["what is the special thing about the restaurants"],
+    "reply":["The primary factors are usually the food itself (e.g. vegetarian, seafood, steak); the cuisine (e.g. Italian, Chinese, Japanese, Indian, French, Mexican, Thai) or the style of offering (e.g. tapas bar, a sushi train, a tastet restaurant, a buffet restaurant or a yum cha restaurant). Beyond this, restaurants may differentiate themselves on factors including speed (see fast food), formality, location, cost, service, or novelty themes (such as automated restaurants)"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Attraction",
+    "query":["What is the good thing about the restaurants"],
+    "reply":["The primary factors are usually the food itself (e.g. vegetarian, seafood, steak); the cuisine (e.g. Italian, Chinese, Japanese, Indian, French, Mexican, Thai) or the style of offering (e.g. tapas bar, a sushi train, a tastet restaurant, a buffet restaurant or a yum cha restaurant). Beyond this, restaurants may differentiate themselves on factors including speed (see fast food), formality, location, cost, service, or novelty themes (such as automated restaurants)"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Attraction",
+    "query":["what attracts the customers to the restaurants"],
+    "reply":["The primary factors are usually the food itself (e.g. vegetarian, seafood, steak); the cuisine (e.g. Italian, Chinese, Japanese, Indian, French, Mexican, Thai) or the style of offering (e.g. tapas bar, a sushi train, a tastet restaurant, a buffet restaurant or a yum cha restaurant). Beyond this, restaurants may differentiate themselves on factors including speed (see fast food), formality, location, cost, service, or novelty themes (such as automated restaurants)"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Attraction",
+    "query":["Why should we come to your restaurants"],
+    "reply":["The primary factors are usually the food itself (e.g. vegetarian, seafood, steak); the cuisine (e.g. Italian, Chinese, Japanese, Indian, French, Mexican, Thai) or the style of offering (e.g. tapas bar, a sushi train, a tastet restaurant, a buffet restaurant or a yum cha restaurant). Beyond this, restaurants may differentiate themselves on factors including speed (see fast food), formality, location, cost, service, or novelty themes (such as automated restaurants)"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "staff",
+    "query":["How are the staffs"],
+    "reply":["We have very dedicated skilled and hardworking staffs."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "staff",
+    "query":["how do staffs permorm"],
+    "reply":["We have very dedicated skilled and hardworking staffs."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "staff",
+    "query":["are the staffs skilled enough"],
+    "reply":["We have very dedicated skilled and hardworking staffs."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "staff",
+    "query":["are staffs good"],
+    "reply":["We have very dedicated skilled and hardworking staffs."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "staff",
+    "query":["do the restaurants have quality staffs"],
+    "reply":["We have very dedicated skilled and hardworking staffs."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "location",
+    "query":["Where are your restaurants located"],
+    "reply":["We are located across the county. we are there in every big cities of the country"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "location",
+    "query":["Where can we find your restaurants"],
+    "reply":["We are located across the county. we are there in every big cities of the country"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "location",
+    "query":["Tell me about the locations of the restaurants"],
+    "reply":["We are located across the county. we are there in every big cities of the country"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "location",
+    "query":["Where are you"],
+    "reply":["We are located across the county. we are there in every big cities of the country"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "location",
+    "query":["Where is your restaurants"],
+    "reply":["We are located across the county. we are there in every big cities of the country"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "location",
+    "query":["what are the main locations of the restaurents"],
+    "reply":["We are located across the county. we are there in every big cities of the country"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "location",
+    "query":["what area do the restaurants cover"],
+    "reply":["We are located across the county. we are there in every big cities of the country"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "type",
+    "query":["What are the types of restaurants"],
+    "reply":["It mainly depends on the restaurants. Basically Restaurants are classified or distinguished in many different ways. Some are of specific type like chinese, indian, italian, continental etc but most provites all types of cusines"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "type",
+    "query":["What variety of restaurents are there"],
+    "reply":["It mainly depends on the restaurants. Basically Restaurants are classified or distinguished in many different ways. Some are of specific type like chinese, indian, italian, continental etc but most provites all types of cusines"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "type",
+    "query":["how are the restaurents classified"],
+    "reply":["It mainly depends on the restaurants. Basically Restaurants are classified or distinguished in many different ways. Some are of specific type like chinese, indian, italian, continental etc but most provites all types of cusines"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "type",
+    "query":["what different domains of restaurant are there"],
+    "reply":["It mainly depends on the restaurants. Basically Restaurants are classified or distinguished in many different ways. Some are of specific type like chinese, indian, italian, continental etc but most provites all types of cusines"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "type",
+    "query":["What type restaurants do you offer"],
+    "reply":["It mainly depends on the restaurants. Basically Restaurants are classified or distinguished in many different ways. Some are of specific type like chinese, indian, italian, continental etc but most provites all types of cusines"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Rates",
+    "query":["How is the rate at the restaurants"],
+    "reply":["We provide very resonable,standard and satisfactory rate."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Rates",
+    "query":["Are restaurants expensive"],
+    "reply":["We provide very resonable,standard and satisfactory rate."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Rates",
+    "query":["Are restaurants affordable"],
+    "reply":["We provide very resonable,standard and satisfactory rate."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Rates",
+    "query":["Are restaurants rates resonable"],
+    "reply":["We provide very resonable,standard and satisfactory rate."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Rates",
+    "query":["Are the rates satisfactory"],
+    "reply":["We provide very resonable,standard and satisfactory rate."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Rates",
+    "query":["Are the rates standard"],
+    "reply":["We provide very resonable,standard and satisfactory rate."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Rates",
+    "query":["Tell me about the rates of the restaurants"],
+    "reply":["We provide very resonable,standard and satisfactory rate."]
+  },
+
+  {
+    "category": "restaurant",
+    "intention": "Rates",
+    "query":["How is the price at the restaurants"],
+    "reply":["We provide very resonable,standard and satisfactory rate."]
+  }, 
+
+  {
+    "category": "restaurant",
+    "intention": "Rates",
+    "query":["How is the rate you provide"],
+    "reply":["We provide very resonable,standard and satisfactory rate."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Rates",
+    "query":["what the rate"],
+    "reply":["We provide very resonable,standard and satisfactory rate."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "Rates",
+    "query":["What kind of rate can i expect at the restaurants"],
+    "reply":["We provide very resonable,standard and satisfactory rate."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "quality",
+    "query":["How is the quality of the restaurents"],
+    "reply":["Our restaurants provides quality service and foods. We do not compromise in the quality of the restaurants"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "quality",
+    "query":["What is the quality of the restaurants"],
+    "reply":["Our restaurants provides quality service and foods. We do not compromise in the quality of the restaurants"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "quality",
+    "query":["what is the standard of your restaurantss"],
+    "reply":["Our restaurants provides quality service and foods. We do not compromise in the quality of the restaurants"]
+  },
+
+  {
+    "category": "restaurant",
+    "intention": "quality",
+    "query":["How are your restaurants"],
+    "reply":["Our restaurants provides quality service and foods. We do not compromise in the quality of the restaurants"]
+  },
+
+  {
+    "category": "restaurant",
+    "intention": "quality",
+    "query":["What quality can we expect from the restaurants"],
+    "reply":["Our restaurants provides quality service and foods. We do not compromise in the quality of the restaurants"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "quality",
+    "query":["what much quality your restaurants provide"],
+    "reply":["Our restaurants provides quality service and foods. We do not compromise in the quality of the restaurants"]
+  },
+  {
+    "category": "restaurant",
+    "intention": "reviews",
+    "query":["How are the reviews of the restaurants"],
+    "reply":["We receive very good and positive reviews from our customers. We take the reviews seriously as they motivates us to improve further."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "reviews",
+    "query":["How much reviews do you get"],
+    "reply":["We receive very good and positive reviews from our customers. We take the reviews seriously as they motivates us to improve further."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "reviews",
+    "query":["How to you handle reviews"],
+    "reply":["We receive very good and positive reviews from our customers. We take the reviews seriously as they motivates us to improve further."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "reviews",
+    "query":["What do you do with the reviews"],
+    "reply":["We receive very good and positive reviews from our customers. We take the reviews seriously as they motivates us to improve further."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "reviews",
+    "query":["What type of reviews do you get"],
+    "reply":["We receive very good and positive reviews from our customers. We take the reviews seriously as they motivates us to improve further."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "customer",
+    "query":["What do your customers say"],
+    "reply":["We have very good customers from all across the country. We maintain very good relations with the customers and value their opinions."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "customer",
+    "query":["How do you deal with the customers"],
+    "reply":["We have very good customers from all across the country. We maintain very good relations with the customers and value their opinions."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "customer",
+    "query":["How are your customers"],
+    "reply":["We have very good customers from all across the country. We maintain very good relations with the customers and value their opinions."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "customer",
+    "query":["How is the relations with the customers"],
+    "reply":["We have very good customers from all across the country. We maintain very good relations with the customers and value their opinions."]
+  },
+  {
+    "category": "restaurant",
+    "intention": "customer",
+    "query":["Where are your customers from"],
+    "reply":["We have very good customers from all across the country. We maintain very good relations with the customers and value their opinions."]
+  }
+    ]
+}
+
+
+  
