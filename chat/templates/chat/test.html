@@ -1360,9 +1360,10 @@
         </div>         
         <form method == 'POST'>           
             <div id="chat-div" class="chat-div">
-            <output id="chat-log1"><br/></output>
-             <output id="chat-log2"><br/></output>
+            <output id="chat-log1"></output>
             <br>
+            <br>
+           <output id="chat-log2"></output>
            </div>
             <div class="input-group">
                 <input type="text" id="chat-message-input" class="form-control" autocomplete="off">
@@ -1479,28 +1480,33 @@
         var data = JSON.parse(e.data);
         var message = data['message'];
         var reply = data['reply'];
-        var x=1
-        x++
-
-        // var add = '<div class="d-block">'+message+'</div>';
-
-        // $('#chat-log1').append(add);
 
 
-        // var sub ='div class="d-block'+reply+'</div>';
-        clone = $("#chat-div").first().clone('true')
+        var add = '<div class="d-block">'+message+'</div>';
+
+        $('#chat-log1').append(add);
+
+
+        var sub ='div class="d-block'+reply+'</div>';
+
         
-        clone.attr('id','chat-log1').find("#chat-log1").attr('id','chat-log'+x)
-        console.log(clone)
-
-
-        document.querySelector('#chat-log1').value += ("You:" + message + '\n');
+        //document.querySelector('#chat-log1').value += ("You:" + message + '\n');
         document.querySelector('#chat-log2').value += ("Bot:" + reply + '\n' );
         
 
     };
 
-    
+    var textarea1 = document.getElementById('chat-log1');
+    setInterval(function(){
+        textarea.scrollTop = textarea.scrollHeight;
+        break
+    }); 
+    var textarea2 = document.getElementById('chat-log2');
+    setInterval(function(){
+        textarea.scrollTop = textarea.scrollHeight;
+        break
+    }); 
+
     chatSocket.onclose = function(e) {
         console.error('Chat socket closed unexpectedly');
     };
