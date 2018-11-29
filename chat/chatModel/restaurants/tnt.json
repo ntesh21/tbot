@@ -1,0 +1,249 @@
+{"intents": [
+    {
+      "intent": "greeting",
+      "query": ["Hey", "What's up", "Hi", "How are you", "Is anyone there?", "Hello", "Good day"],
+      "reply": ["Hi there, how can I help?"]
+    },
+    {
+      "intent": "goodbye",
+      "query": ["Bye", "See you later", "Goodbye", "I am leaving"],
+      "reply": ["See you later, thanks for visiting"]
+    },
+    {
+      "intent": "thanks",
+      "query": ["Thanks", "Thank you", "That's helpful"],
+      "reply": ["Happy to help, Any time!"]
+    },
+
+	{"intent": "procedure_for_host_register", 
+	"query": ["how can i become co-host"], 
+	"reply": ["to register for host go to <a href='http://40.122.109.2/login/'>Register as host</a>"]},
+	
+	{"intent": "procedure_for_host_register", 
+	"query": ["I wonder if you can guide me about the procedure for becoming co-host"], 
+	"reply": ["you can register to this site <a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+	
+	{"intent": "procedure_for_host_register", 
+	"query": ["I was wondering if you could tell me about the procedure to become a host"],
+	"reply": ["you can register to <a href='http://40.122.109.2/login/'>Register as host</a>"]},
+ 	
+ 	{"intent": "procedure_for_host_register",
+ 	 "query": ["how can i become a co host"], 
+ 	 "reply": ["you can register here <a href='http://40.122.109.2/login/'>Register as host</a>"]},
+
+ 	{"intent": "procedure_for_host_register", 
+ 	 "query": ["please tell me the procedure to become a co host"], 
+ 	 "reply": ["you can register to here <a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+
+ 	{"intent": "procedure_for_host_register", 
+ 	 "query": ["I want to register as a guest . how can i do that"], 
+ 	 "reply": ["you can register to here <a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+
+ 	{"intent": "procedure_for_host_register", 
+ 	 "query": ["I want to register as a guest. tell me how can i do that"], 
+ 	 "reply": ["you can register to here <a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+
+ 	{"intent": "procedure_for_host_register", 
+ 	 "query": ["I want to register for a guest. How can i do that"], 
+ 	 "reply": ["you can register here <a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+
+ 	{"intent": "request_change_checkout_time_for_host_register", 
+ 	 "query": ["change my checkout time, I am the guest"], 
+ 	 "reply": ["yes you can change your checkout time.<a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+  
+  {"intent": "procedure_for_co-host_register", 
+  "query": ["how can i become co-host"], 
+  "reply": ["to register for co-host go to <a href='http://40.122.109.2/login/'>Register as co-host</a>"]},
+  
+  {"intent": "procedure_for_co-host_register", 
+  "query": ["I wonder if you can guide me about the procedure for becoming co-host"], 
+  "reply": ["you can register to this site <a href='http://40.122.109.2/login/'>Register as co-host</a>"]}, 
+  
+  {"intent": "procedure_for_co-host_register", 
+  "query": ["I was wondering if you could tell me about the procedure to become a co-host"],
+  "reply": ["you can register to <a href='http://40.122.109.2/login/'>Register as co-host</a>"]},
+  
+  {"intent": "procedure_for_co-host_register",
+   "query": ["how can i become a co-host"], 
+   "reply": ["you can register here <a href='http://40.122.109.2/login/'>Register as co-host</a>"]},
+
+  {"intent": "procedure_for_co-host_register", 
+   "query": ["please tell me the procedure to become a co-host"], 
+   "reply": ["you can register to here <a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+
+  {"intent": "procedure_for_host_register", 
+   "query": ["I want to register as a guest . how can i do that"], 
+   "reply": ["you can register to here <a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+
+  {"intent": "procedure_for_host_register", 
+   "query": ["I want to register as a guest. tell me how can i do that"], 
+   "reply": ["you can register to here <a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+
+  {"intent": "procedure_for_host_register", 
+   "query": ["I want to register for a guest. How can i do that"], 
+   "reply": ["you can register here <a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+
+  {"intent": "request_change_checkout_time_for_host_register", 
+   "query": ["change my checkout time, I am the guest"], 
+   "reply": ["yes you can change your checkout time.<a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+
+ 
+  {"intent": "procedure_for_guest_register", 
+  "query": ["how can i become guest"], 
+  "reply": ["to register for guest go to <a href='http://40.122.109.2/login/'>Register as guest</a>"]},
+  
+  {"intent": "procedure_for_guest_register", 
+  "query": ["I wonder if you can guide me about the procedure for becoming guest"], 
+  "reply": ["you can register to this site <a href='http://40.122.109.2/login/'>Register as guest</a>"]}, 
+  
+  {"intent": "procedure_for_guest_register", 
+  "query": ["I was wondering if you could tell me about the procedure to become a guest"],
+  "reply": ["you can register to <a href='http://40.122.109.2/login/'>Register as guest</a>"]},
+  
+  {"intent": "procedure_for_guest_register",
+   "query": ["how can i become a guest"], 
+   "reply": ["you can register here <a href='http://40.122.109.2/login/'>Register as guest</a>"]},
+
+  {"intent": "procedure_for_guest_register", 
+   "query": ["please tell me the procedure to become a guest"], 
+   "reply": ["you can register to here <a href='http://40.122.109.2/login/'>Register as guest</a>"]}, 
+
+  {"intent": "procedure_for_guest_register", 
+   "query": ["I want to register as a guest . how can i do that"], 
+   "reply": ["you can register to here <a href='http://40.122.109.2/login/'>Register as guest</a>"]}, 
+
+  {"intent": "procedure_for_guest_register", 
+   "query": ["I want to register as a guest. tell me how can i do that"], 
+   "reply": ["you can register to here <a href='http://40.122.109.2/login/'>Register as guest</a>"]}, 
+
+  {"intent": "procedure_for_guest_register", 
+   "query": ["I want to register for a guest. How can i do that"], 
+   "reply": ["you can register here <a href='http://40.122.109.2/login/'>Register as guest</a>"]}, 
+
+  {"intent": "request_change_checkout_time_for_host_register", 
+   "query": ["change my checkout time, I am the guest"], 
+   "reply": ["yes you can change your checkout time.<a href='http://40.122.109.2/login/'>Register as host</a>"]}, 
+  
+  {"intent": "point_information", 
+ 	 "query": ["As a guest can I earn points?"], 
+ 	 "reply": ["yes you can earn points"]}, 
+
+ 	{"intent": "point_information", 
+ 	 "query": ["can a guest earn points"], 
+ 	 "reply": ["yes you can earn points"]}, 
+
+ 	{"intent": "point_information", 
+ 	 "query": ["how can a guest earn points?"], 
+ 	 "reply": ["yes you can earn points"]}, 
+
+ 	{"intent": "signup_info_cleaner", 
+ 	 "query": ["can i sign up as a cleaner"], 
+ 	 "reply": ["you need to get invited by the master cleaner"]}, 
+
+ 	{"intent": "signup_info_cleaner", 
+ 	 "query": ["how can i register for the cleaner"], 
+ 	 "reply": ["you need to get invited by the master cleaner"]}, 
+
+ 	{"intent": "signup_info_cleaner", 
+ 	 "query": ["i want to become the cleaner how can i do that by joining?"], 
+ 	 "reply": ["you need to get invited by the master cleaner"]}, 
+
+ 	{"intent": "signup_info_cleaner", 
+ 	 "query": ["how do i get to be register for the cleaner"], 
+ 	 "reply": ["you need to get invited by the master cleaner"]}, 
+
+ 	{"intent": "signup_info_cleaner", 
+ 	 "query": ["do i get to register or signup as a cleaner"], 
+ 	 "reply": ["you need to get invited by the master cleaner"]}, 
+
+ 	{"intent": "payment_information", 
+ 	 "query": ["Do i need to pay to use trip tnt?"], 
+ 	 "reply": ["Its free of cost"]}, 
+
+ 	{"intent": "payment_information", 
+ 	 "query": ["how can i pay to the trip tnt"], 
+ 	 "reply": ["Its free of cost"]}, 
+
+ 	{"intent": "payment_information", 
+ 	 "query": ["how should i pay ?"], 
+ 	 "reply": ["Its free of cost"]}, 
+
+ 	{"intent": "point_information", 
+ 	 "query": ["Can I get points"], 
+ 	  "reply": ["yes you can gain points"]},
+
+    {"intent": "payment_information", 
+     "query": ["do i need to pay by cheque or by cash?"], 
+     "reply": ["Its free of cost"]}, 
+
+    {"intent": "payment_information", 
+     "query": ["can i pay by check"], 
+     "reply": ["Its free of cost"]}, 
+
+    {"intent": "payment_information", 
+     "query": ["what amount do i need to pay to the company"], 
+     "reply": ["Its free of cost"]}, 
+
+    {"intent": "payment_information", 
+     "query": ["what is the fee to join for this"], 
+     "reply": ["Its free of cost"]}, 
+
+    {"intent": "payment_information", 
+     "query": ["tell me about the fees"], 
+     "reply": ["Its free of cost"]}, 
+
+    {"intent": "Thank", 
+     "query": ["you helped me thank you"], 
+     "reply": ["welcome"]}, 
+
+    {"intent": "request_change_checkout_time", 
+     "query": ["I want to change my checkout time to 1 a.m"], 
+     "reply": ["yes you can change your checkout time."]}, 
+
+    {"intent": "request_change_checkout_time", 
+     "query": ["I was wondering if you could change my checkout time to 6 AM"], 
+     "reply": ["yes you can change your checkout time."]}, 
+
+    {"intent": "request_change_checkout_time", 
+     "query": ["I was wondering if you could change my checkout time to 6 AM"], 
+     "reply": ["yes you can change your checkout time."]},
+
+
+ { 
+  "intent": "email", 
+  "query": ["what is the email address of your company"], 
+  "reply": ["the email address of our company is info@triptnt.com"]}, 
+
+{
+  "intent": "rewards", 
+  "query": ["How do you get rewards."], 
+  "reply": ["Reward are based on the length of stay and there is also a signup reward."]}, 
+
+{
+  "intent": "cleaner", 
+  "query": ["Can i register as a Cleaner?"], 
+  "reply": ["you can become cleaner through invitation only"]}, 
+
+{
+  "intent": "task", 
+  "query": ["How can I assig a task?"], 
+  "reply": ["You can drag and drop a task in the calendar and confirm after assigning a task."]},
+
+{
+  "intent": "points", 
+  "query": ["How can I spend my points?"], 
+  "reply": ["If you are a host then your points will be given to guest staying in your listing after you confirm."]}, 
+
+{
+  "intent": "points", 
+  "query": ["How can I reedem Points?"], 
+  "reply": ["You can reedem the points following the instructions on screen after you have accumulated 20000 points."]}, 
+
+{
+  "intent": "points", 
+  "query": ["Do I need to buy Points?"], 
+  "reply": ["Yes you need to buy points not in general but for each listing."]
+}
+
+ ]
+}

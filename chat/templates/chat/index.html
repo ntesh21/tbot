@@ -1,1357 +1,546 @@
-<!-- chat/templates/chat/index.html -->
-
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
 <!DOCTYPE html>
-<html lang="en">
 {% load static %}
+<html>
 
 <head>
-    <!-- meta tags -->
-    <!-- Title of the document -->
-    <title>Lama Group</title>
-    <meta charset="UTF-8" />
+    <title>Trip Tnt</title>
+    <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="keywords" content="Lama energy group, gas, electricity, petroleum products, mining of commodities, mobile operator, tv and internet, scrap iron and chemicals, realty,
-    investments and projects, heating industry" />
-    <!-- /meta tags -->
-    <!-- Owl Stylesheets -->
-    <link href="{% static 'css/owl.carousel.min.css' %}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{% static 'css/owl.theme.default.min.css' %}" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!-- /Owl Stylesheets -->
-    <!-- gallery css -->
-    <link href="{% static 'css/prettyPhoto.css' %}" rel="stylesheet" type="text/css" media="all" />
-    <!-- font awesome css -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-        crossorigin="anonymous">
-    <!-- bootstrap css -->
-    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
-    <!-- custom css -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Trip TnT  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 
-    <!-- animate css -->
-    <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css" media="all" />
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+     crossorigin="anonymous">
+    <!-- jQuery (Bootstrap's JavaScript plugins) -->
+    <!-- Custom Theme files -->
     <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
-    <!-- Online google fonts -->
-    <link href="//fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&amp;subset=cyrillic,latin-ext,vietnamese"
-        rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic,cyrillic-ext,latin-ext,vietnamese"
-        rel="stylesheet">
-    <!-- /Online google fonts -->
+    <!--webfont-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+     crossorigin="anonymous">
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,800,300,100,500,700,600,900' rel='stylesheet' type='text/css'>
+    <!--animated-css-->
+    <link href="{% static 'css/animate.css' %}" rel="stylesheet" type="text/css" media="all" />
+    <link href="{% static 'css/scss/custom.css' %}" rel="stylesheet" type="text/css" media="all" />
+<style>
+.chat-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 80px;
+    border: 3px solid #f1f1f1;
+    border-top: none;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container2 {
+    max-width: 300px;
+    padding: 0px 10px 10px 10px;
+    background-color: white;
+    border: 1px solid #f95a60;
+    margin-bottom: 5px;
+   
+    }
+#chatbox{
+     max-height: 270px;
+     height: 270px;
+    overflow-y: scroll;
+
+}
+
+/* Full-width textarea */
+.form-container2 textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    background: rgba(0, 123, 255, 0.25);
+    resize: none;
+    min-height: 200px;
+}
+
+/* When the textarea gets focus, do something */
+.form-container2 textarea:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/send button */
+.form-container2 .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom:10px;
+    opacity: 0.8;
+}
+
+#chat-message-input { 
+    border: 1px solid #bdbdbd;
+    background-color: #eaeaea;
+    color: #151515;
+}
+#chat-message-input:focus{
+    background-color: #fff;
+    border-color: #1c61a0;
+    outline: none;
+}
+#chat-message-submit{
+    color: #1c61a0;
+}
+
+
+/* Add a red background color to the cancel button */
+.form-container2 .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container2 .btn:hover, .open-button:hover {
+    opacity: 1;
+}
+</style>
 </head>
 
 <body>
-    <!-- banner -->
-    <nav class="navbar navbar-expand-lg navbar-dark lama-nav fixed-top">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <!---->
+    <nav class="header navbar-fixed-top tntNavbarTemp">
+        <div class="logo wow fadeInLeft" data-wow-delay="0.5s">
+            <a href="index.html">
+                <img src="{% static 'images/logo_house.png' %}" alt="TripTnT"/>
+            </a>
+        </div>
+        <div class="top-menu">
+            <span class="menu"></span>
+            <ul>
+                <li>
+                    <a class="scroll" href="#home">HOME</a>
+                </li>
+                <li>
+                    <a class="scroll" href="#brief">BECOME A HOST</a>
+                </li>
+                <li>
+                    <a class="scroll" href="#screenshots">BECOME A TASKMASTER</a>
+                </li>
+                <li>
+                    <a class="scroll" href="#pricing">PRICING</a>
+                </li>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav lama-navlist">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
+                <li>
+                    <a class="scroll" href="#testimonial">TESTIMONIAL</a>
                 </li>
-                <li class="nav-item dropdown nav-item2">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        About
-                    </a>
-                    <div class="dropdown-menu small-dropdown" aria-labelledby="navbarDropdown">
-                        <ul class="nav flex-column lama-list">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Overview</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">History</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Verticals
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <h6 class="text-uppercase mega-head">QT</h6>
-                                    <ul class="nav flex-column lama-list">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/QT/qt_fuel.html">Fuel</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/QT/qt_logistics.html">Logistics</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/QT/qt_online_store.html">Online Store</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/QT/qt_whole_sale.html">Whole Sale</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/QT/qt_auto_repair.html">Auto Repair</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /.col-md-4  -->
-                                 <div class="col-md-2">
-                                    <h6 class="text-uppercase mega-head">Insurance</h6>
-                                    <ul class="nav flex-column lama-list">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/Insurance/insurance_bodi.html">Bodi</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/Insurance/insurance_Mr_T.html">Mr T</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /.col-md-4  -->
-                                <div class="col-md-2">
-                                    <h6 class="text-uppercase mega-head">abroad</h6>
-                                    <ul class="nav flex-column lama-list">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/Abroad/abroad_IT_consulting.html">IT Consulting</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/Abroad/abroad_Study_career.html">Study Center</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /.col-md-4  -->
-                                <div class="col-md-2">
-                                    <h6 class="text-uppercase mega-head">restaurant</h6>
-                                    <ul class="nav flex-column lama-list">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/Restaurants/restaurants_kave_foods.html">Kave Foods</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/Restaurants/restaurants_restaurants.html">Restaurant</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /.col-md-4  -->
-                                <div class="col-md-2">
-                                    <h6 class="text-uppercase mega-head">Real Estate</h6>
-                                    <ul class="nav flex-column lama-list">
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/RealEstate/realEstate_the_tara_group.html">The TaRa Group</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" href="Verticals/RealEstate/realEstate_hotel_bodi_inn.html">Hotel - Bodi Inn and Suites</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <!-- /.col-md-4  -->
-                                <div class="col-md-2">
-                                    <a href="">
-                                        <img src="{% static 'images/megamenu-image.jpg' %}" alt="" class="img-fluid"/>
-                                    </a>
-                                    <small class="float-right text-right credit">
-                                        <a href="https://unsplash.com/photos/ObTfaF2hngw" target="_blank">Photo by
-                                            Nicola Nuttall on Unsplash</a>
-                                    </small>
-                                </div>
-                                <!-- /.col-md-4  -->
-                            </div>
-                        </div>
-                        <!--  /.container  -->
-
-
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        News
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        Careers
-                    </a>
-                </li>
-            </ul>
-            <ul class="navbar-nav lama-navlist ml-auto">
-                <li class="nav-item dropdown nav-item2">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdow3" role="button" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">
-                        Labs
-                    </a>
-                    <div class="dropdown-menu small-dropdown" aria-labelledby="navbarDropdown3">
-                        <ul class="nav flex-column lama-list">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">E-commerce</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">3D</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">AI Engine</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">NLP</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Payroll</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Computer Vision</a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Responsibility</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-twitter"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fab fa-google-plus-g"></i></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link in-touch" href="#">Get in Touch</a>
+                <li>
+                    <a class="scroll" href="#contact">CONTACT</a>
                 </li>
             </ul>
         </div>
-        <a class="lama-navbar-logo text-center" href="#"><img src="{% static 'images/lg-logo.png' %}" alt="lama group"width="100"></a>
+        <div class="clearfix"></div>
     </nav>
+    <div class="container slider-wrapper">
+        <div class="row">
+            <div class="modal fade cusModal" id="justModal">
+                <div class="modal-dialog tntModal-dialog" role="document">
+                    <div class="modal-content tntModal-content">
+                        <div class="modal-body tntModal-body">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                            <div class="row">
+                                <div class="col-lg-5 img-container">
+                                    <img src="{% static 'images/stock.jpg' %}" alt="" class="img-fluid"/>
+                                </div>
+                                <div class="col-lg-7 modal-info">
+                                    <h2>
+                                        <b>Finally, its here!!</b>
+                                    </h2>
+                                    <p>TripTnT has launched a Loyalty Program specifically for the Short-Term Rental industry. </p>
+                                    <p>The hospitality industry is very competitive. Now we can compete with the big hotel chains!</p>
+                                    <p>Signup now and receive 5,000 bonus points per listing... its
+                                        <span style="color: #03A9F4; text-transform: uppercase;">free</span> to sign up!</p>
+                                    <p>Everyone is invited: Airbnb, VRBO, Booking.com, HomeAway…</p>
+                                    <hr>
+                                    <a href="#" class="btn login-btn">Login</a>
+                                    <span style="font-size: 16px; font-weight: bold; text-transform: uppercase; margin: 0 10px;">or</span>
+                                    <a href="#" class="btn signUp-btn">Sign Up</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.modal -->
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators custom-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active item-slide custom-itemSlide">
+                    <img src="{% static 'images/art-classic-dark-242827.jpg' %}" alt="Guests" class="img-responsive"/>
+                        <div class="carousel-caption slide-caption">
+                            <div class="container-fluid wow fadeInUp banner-right" data-wow-delay="0.5s">
+                                <div class="col-lg-12">
+                                    <h3>Loyal <span>visitors</span> = Better <span>reviews</span></h3>
+                                    <div class="container-fluid text-info">
+                                        <p>
+                                            Attract new guest and keep your old guest coming back. <br> Increase bookings and Revenue <br> <span class="num-highlight">68%</span> of milenials
+                                            display loyalty to a brand
+                                        </p>
+                                        <br>
+                                        <p>
+                                            A loyalty program builds a strong connection <br> Let your guest know that you care about them
+                                        </p>
+                                    </div>
+                                </div>                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item item-slide">
+                        <img src="{% static 'images/home2.jpg' %}" alt="Guests" class="img-responsive"/>
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                    <div class="item item-slide">
+
+                        <img src="{% static 'images/home3.jpg' %}" alt="Listing 3" class="img-responsive"/>
+                        <div class="carousel-caption">
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <a class="left carousel-control custom-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <i class="fas fa-angle-double-left" aria-hidden="true"></i>
+                    <!-- <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> -->
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control custom-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <i class="fas fa-angle-double-right" aria-hidden="true"></i>
+                    <!-- <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span> -->
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!---->
+
+    <div class="container-fluid banner-bottom">
+        <div class="row learn-more-row">
+            <div class="col-lg-5 col-lg-offset-1">
+                <h2>
+                    <b>Sign Up and Learn More</b>
+                </h2>
+                <small><a href="#rewards" class="scroll">Click here to learn about Rewards.</a></small>
+            </div>
+            <div class="col-lg-3 text-center host-wrapper">
+                <a href="#" class="btn btn-lg btn-primary host-btn">HOST</a>
+            </div>
+            <div class="col-lg-3 text-center guest-wrapper">
+                <a href="#" class="btn btn-lg btn-primary guest-btn">GUEST</a>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+
+    <div id="brief" class="brief">
+        <div class="container">
+            <div class="col-md-12 card-wrapper">
+
+                <h2 class="brief_head">We partner with the world’s leading travel and technology brands to help
+                    you get more reservations</h2>
+
+                <div class="container partners" style="padding: 40px 0;">
+                    <div class="flex-row">
+                        <div class="partners__col col-md-2">
+                            <img class="img-fluid partners__col col-md-2_img-01 lazyloaded" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_booking_300_2x.png"
+                             data-lazy-src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_booking_300_2x.png"
+                             alt="" data-was-processed="true">
+                            <noscript>
+                                <img class="img-fluid partners__col col-md-2_img-01" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_booking_300_2x.png"
+                                 alt="" />
+                            </noscript>
+                        </div>
+                        <div class="partners__col col-md-2">
+                            <img class="img-fluid partners__col col-md-2_img-02 lazyloaded" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_tripadvisor_300_2x.png"
+                             data-lazy-src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_tripadvisor_300_2x.png"
+                             alt="" data-was-processed="true">
+                            <noscript>
+                                <img class="img-fluid partners__col col-md-2_img-02" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_tripadvisor_300_2x.png"
+                                 alt="" />
+                            </noscript>
+                        </div>
+                        <div class="partners__col col-md-2">
+                            <img class="img-fluid partners__col col-md-2_img-03 lazyloaded" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_airbnb_300_2x.png"
+                             data-lazy-src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_airbnb_300_2x.png"
+                             alt="" data-was-processed="true">
+                            <noscript>
+                                <img class="img-fluid partners__col col-md-2_img-03" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_airbnb_300_2x.png"
+                                 alt="" />
+                            </noscript>
+                        </div>
+                        <div class="partners__col col-md-2">
+                            <img class="img-fluid partners__col col-md-2_img-04 lazyloaded" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_hostelworld_300_2x.png"
+                             data-lazy-src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_hostelworld_300_2x.png"
+                             alt="" data-was-processed="true">
+                            <noscript>
+                                <img class="img-fluid partners__col col-md-2_img-04" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_hostelworld_300_2x.png"
+                                 alt="" />
+                            </noscript>
+                        </div>
+                        <div class="partners__col col-md-2">
+                            <img class="img-fluid partners__col col-md-2_img-05 lazyloaded" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_agoda_300_2x.png"
+                             data-lazy-src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_agoda_300_2x.png"
+                             alt="" data-was-processed="true">
+                            <noscript>
+                                <img class="img-fluid partners__col col-md-2_img-05" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_agoda_300_2x.png"
+                                 alt="" />
+                            </noscript>
+                        </div>
+                        <div class="partners__col col-md-2">
+                            <img class="img-fluid partners__col col-md-2_img-06 lazyloaded" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_expedia_300_2x.png"
+                             data-lazy-src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_expedia_300_2x.png"
+                             alt="" data-was-processed="true">
+                            <noscript>
+                                <img class="img-fluid partners__col col-md-2_img-06" src="https://wkusaapbz93eciyl3ze4vh1a-wpengine.netdna-ssl.com/wp-content/uploads/2018/03/logo_expedia_300_2x.png"
+                                 alt="" />
+                            </noscript>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top: 40px; font-size: 14px;"></div>
+                </div>
+
+            </div>
+
+
+
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <!---->
+    <div id="rewards" class="features">
+        <div class="container">
+            <div class="col-lg-12 card-wrapper">
+                <div class="feature-text text-center">
+                    <h2>Learn More about Rewards</h2>
+                    <p>Following are the information on rewards that are included in Trip TnT</p>
+                </div>
+                <div class="features-section">
+                    <div class="card">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#host" aria-controls="host" role="tab" data-toggle="tab"> <i class="fas fa-user-tie"></i> Host</a></li>
+                            <li role="presentation"><a href="#guest" aria-controls="guest" role="tab" data-toggle="tab"> <i class="fas fa-user"></i> Guest</a></li>
+                        </ul>
     
-    <div class="banner">
-        <div class="owl-carousel">
-            <div class="slider1 lama-slider">
-                <div class="container qoute-wrapper">
-                    <div class="qoute">
-                        <h1 class="text-white">
-                            The best way to find yourself <br>
-                            is to lose yourself in the <span class="highlight">service</span> of others.
-                        </h1>
-                        <a href="#" class="btn btn-lg learn-btn mt-5">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="slider2 lama-slider slider2-qoute">
-                <div class="container qoute-wrapper">
-                    <div class="qoute text-right">
-                        <h1 class="text-white">
-                            To keep a customer <br>
-                            demands as much skill as to win one.
-                        </h1>
-                        <a href="#" class="btn btn-lg learn-btn mt-5">Learn More</a>
-                    </div>
-                </div>
-
-            </div>
-            <div class="slider3 lama-slider">
-                <div class="container qoute-wrapper">
-                    <div class="qoute">
-                        <h1 class="text-white">
-                            There is no exquisite <span class="highlight2">beauty</span> <br>
-                            without some strangeness in the propotion.
-                        </h1>
-                        <a href="#" class="btn btn-lg learn-btn mt-5">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="slider4 lama-slider">
-                <div class="container qoute-wrapper">
-                    <div class="qoute text-right">
-                        <h1 class="text-white">
-                            The secret of a successful <span class="highlight3">restaurant</span> <br>
-                            is sharp knives.
-                        </h1>
-                        <a href="#" class="btn btn-lg learn-btn mt-5">Learn More</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- stats -->
-        <section class="stats_test pb-5 container-fluid">
-            <div class="row inner_stat_wthree_agileits">
-                <div class="col-md-3 col-sm-6 py-3 stats_info counter_grid">
-                    <i class="far fa-building"></i>
-                    <p class="counter">145</p>
-                    <h4>Branches</h4>
-                </div>
-                <div class="col-md-3 col-sm-6 py-3 stats_info counter_grid1">
-                    <i class="fas fa-boxes"></i>
-                    <p class="counter">20</p>
-                    <h4>Verticals</h4>
-                </div>
-                <div class="col-md-3 col-sm-6 py-3 stats_info counter_grid2">
-                    <i class="fas fa-user-tie"></i>
-                    <p class="counter">560</p>
-                    <h4>Employees</h4>
-                </div>
-                <div class="col-md-3 col-sm-6 py-3 stats_info counter_grid3">
-                    <i class="far fa-smile"></i>
-                    <p class="counter">1 million +</p>
-                    <h4>Happy Customers</h4>
-                </div>
-            </div>
-        </section>
-        <!-- /stats -->
-    </div>
-    <!-- /banner -->
-
-    <!-- services grids -->
-    <section class="w3layouts-wrapper text-center py-5" id="section1">
-        <div class="container py-lg-4">
-            <header>
-                <h3>Our Verticals</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </header>
-            <div class="w3ls-wrapper-content">
-                <div class="row pt-lg-3">
-                    <div class="agileits-s-grid col-lg-4 col-12 mt-5">
-                        <div class="container-fluid vertical-wrapper">
-                            <a href="#">
-                                 <img src="{% static 'images/gas-vertical.jpg' %}" alt="" class="img-fluid"/>
-                            </a>
-                            <div class="vertical-cap">
-                                <h5 class="vertical-title">QT</h5>
-                                <a href="#">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="agileits-s-grid col-lg-4 col-12 mt-sm-5 mt-5">
-                        <div class="container-fluid vertical-wrapper">
-                            <a href="#">
-                                 <img src="{% static 'images/insurance-vertical.jpg' %}" alt="" class="img-fluid"/>
-                            </a>
-                            <div class="vertical-cap">
-                                <h5 class="vertical-title">Insurance</h5>
-                                <a href="#">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="agileits-s-grid col-lg-4 col-12 mt-5">
-                        <div class="container-fluid vertical-wrapper">
-                            <a href="#">
-                                 <img src="{% static 'images/restaurant-vertical.jpg' %}" alt="" class="img-fluid"/>
-                            </a>
-                            <div class="vertical-cap">
-                                <h5 class="vertical-title">Restaurant</h5>
-                                <a href="#">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row pt-lg-3">
-                    <div class="agileits-s-grid col-lg-4 col-12 mt-5">
-                        <div class="container-fluid vertical-wrapper">
-                            <a href="#">
-                                 <img src="{% static 'images/estate-vertical.jpg' %}" alt="" class="img-fluid"/>
-                            </a>
-                            <div class="vertical-cap">
-                                <h5 class="vertical-title">Real Estate</h5>
-                                <a href="#">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="agileits-s-grid col-lg-4 col-12 mt-5">
-                        <div class="container-fluid vertical-wrapper">
-                            <a href="#">
-                                 <img src="{% static 'images/consulting-vertical.jpg' %}" alt="" class="img-fluid"/>
-                            </a>
-                            <div class="vertical-cap">
-                                <h5 class="vertical-title">IT Consulting</h5>
-                                <a href="#">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="agileits-s-grid col-lg-4 col-12 mt-5">
-                        <div class="container-fluid vertical-wrapper">
-                            <a href="#">
-                                 <img src="{% static 'images/salon-vertical-i.jpeg' %}" alt="" class="img-fluid"/>
-                            </a>
-                            <div class="vertical-cap">
-                                <h5 class="vertical-title">Salon</h5>
-                                <a href="#">read more</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /services grids -->
-    <!-- about -->
-    <section class="w3-about" id="section2">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 wthree-abt-info">
-                    <h2>ABOUT US</h2>
-                    <p class="my-xl-4 my-lg-3 my-md-4 my-3">
-                        Lorem Ipsum is simply dummy text of the printing and
-                        typesetting industry. Lorem Ipsum has been the industry's
-                        standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                        scrambled
-                        it to make a type specimen book. It has survived not only five centuries, but also the leap
-                        into
-                        electronic typesetting, remaining essentially unchanged. It was popularised in the ore recently
-                        with
-                        desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
-                    </p>
-                    <a href="#" class="btn px-4" data-toggle="modal" data-target=".bd-example-modal-lg">READ MORE</a>
-                    <!-- Modal -->
-
-                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-dialog modal-lg">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel8">Title goes here</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                             <img src="{% static 'images/abt.jpg' %}" alt="Card image cap" class="card-img-top align-self-center"/>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <p>
-                                                This is a longer card with supporting text below as a natural lead-in
-                                                to
-                                                additional
-                                                content. This content is a little bit longer. There are many variations
-                                                of
-                                                passages of Lorem Ipsum available, but the majority have suffered
-                                                alteration
-                                                in some form, by injected humour, or randomised words which don't look
-                                                even
-                                                slightly believable. If you are going to use a passage of Lorem Ipsum,
-                                                you
-                                                need to be sure there isn't anything embarrassing hidden in the middle
-                                                of
-                                                text. All the Lorem Ipsum generators on the Internet tend to repeat
-                                                predefined
-                                                chunks as necessary.
-                                            </p>
-                                        </div>
+                        <!-- Tab panes -->
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="host">
+                                <div class="row flex-box">
+                                    <div class="col-lg-5">
+                                         <img src="{% static 'images/host.jpg' %}" alt="Host Image" class="img-responsive"/>
                                     </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- /Modal -->
-                </div>
-                <div class="col-lg-6 p-0 text-center">
-                     <img src="{% static 'images/abt.jpg' %}" alt="about-image-agileits" class="img-fluid"/>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- /about -->
-    <!--gallery  -->
-
-    <!-- <section class="wthree-row w3-gallery py-sm-5 py-3" id="section3">
-        <div class="container-fluid py-md-5 py-3 py-sm-2 text-center">
-            <header>
-                <h3>Section Heading</h3>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            </header>
-            <ul class="portfolio-categ filter pt-5 pt-sm-4 mb-5 mb-sm-4 text-center">
-                <li class="port-filter all active">
-                    <a href="#">All</a>
-                </li>
-                <li class="cat-item-1">
-                    <a href="#" title="Category 1">Interior</a>
-                </li>
-                <li class="cat-item-2">
-                    <a href="#" title="Category 2">Technology</a>
-                </li>
-                <li class="cat-item-3">
-                    <a href="#" title="Category 3">Travel</a>
-                </li>
-                <li class="cat-item-4">
-                    <a href="#" title="Category 4">package</a>
-                </li>
-            </ul>
-            <ul class="portfolio-area clearfix">
-                <li class="portfolio-item2" data-id="id-0" data-type="cat-item-4">
-                    <div>
-                        <a class="image-gal" href="images/g1.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g1.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-1" data-type="cat-item-2">
-                    <div>
-                        <a class="image-gal" href="images/g2.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g2.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-2" data-type="cat-item-1">
-                    <div>
-                        <a class="image-gal" href="images/g3.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g3.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-3" data-type="cat-item-4">
-                    <div>
-                        <a class="image-gal" href="images/g4.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g4.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-4" data-type="cat-item-3">
-                    <div>
-                        <a class="image-gal" href="images/g5.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g5.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-5" data-type="cat-item-2">
-                    <div>
-                        <a class="image-gal" href="images/g6.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g6.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-6" data-type="cat-item-1">
-                    <div>
-                        <a class="image-gal" href="images/g7.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g7.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-7" data-type="cat-item-1">
-                    <div>
-                        <a class="image-gal" href="images/g8.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g8.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-9" data-type="cat-item-4">
-                    <div>
-                        <a class="image-gal" href="images/g9.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g9.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-9" data-type="cat-item-3">
-                    <div>
-                        <a class="image-gal" href="images/g10.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g10.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-10" data-type="cat-item-2">
-                    <div>
-                        <a class="image-gal" href="images/g11.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g11.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-8" data-type="cat-item-1">
-                    <div>
-                        <a class="image-gal" href="images/g12.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g12.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-9" data-type="cat-item-3">
-                    <div>
-                        <a class="image-gal" href="images/g10.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g10.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-10" data-type="cat-item-2">
-                    <div>
-                        <a class="image-gal" href="images/g1.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g1.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-                <li class="portfolio-item2" data-id="id-8" data-type="cat-item-1">
-                    <div>
-                        <a class="image-gal" href="images/g3.jpg" data-gal="prettyPhoto[gallery]">
-
-                            <img src="images/g3.jpg" class="img-fluid w3layouts agileits" alt="">
-
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section> -->
-
-    <!-- //gallery -->
-
-    <!-- designs -->
-    <!-- <div class="w3-agileits-interior-design pb-lg-5" id="section3">
-        <div class="container">
-            <h3 class="text-center">About The Verticals</h3>
-            <div class="row w3ls-interior-design-grids">
-                <div class="col-lg-6 w3ls-interior-design-grid-left">
-                    <figure class="effect-lexi">
-                        <img src="images/gas-station.jpg" alt="" class="img-fluid rounded" />
-                    </figure>
-                    <small class="credit">
-                        <a href="https://unsplash.com/photos/ZdzO5PgYObA" target="_blank">
-                            Photo by Juan Fernandez on Unsplash
-                        </a>
-                    </small>
-                </div>
-                <div class="col-lg-6 w3ls-interior-design-grid-right">
-                    <div class="row card-info card-info-right">
-                        <h3>
-                            Fuel
-                        </h3>
-                        <p>
-                            The petroleum industry, also known as the oil industry or the oil patch, includes the global processes of exploration, extraction, refining, transporting (often by oil tankers and pipelines), and marketing of petroleum products. The largest volume products of the industry are fuel oil and gasoline (petrol). Petroleum (oil) is also the raw material for many chemical products, including pharmaceuticals, solvents, fertilizers, pesticides, synthetic fragrances, and plastics. The extreme monetary value of oil and its products has led to it being known as "black gold". The industry is usually divided into three major components: upstream, midstream, and downstream.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row w3ls-interior-design-grids">
-                <div class="col-lg-6 w3ls-interior-design-grid-right">
-                    <div class="row card-info card-info-left">
-                        <h3>
-                            Salon
-                        </h3>
-                        <p>
-                            Electricity is the set of physical phenomena associated with the presence and motion of matter that has a property of electric charge. In early days, electricity was considered as being not related to magnetism. Later on, many experimental results and the development of Maxwell's equations indicated that both electricity and magnetism are from a single phenomenon: electromagnetism. Various common phenomena are related to electricity, including lightning, static electricity, electric heating, electric discharges and many others.
-
-                            The presence of an electric charge, which can be either positive or negative, produces an electric field.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 w3ls-interior-design-grid-left">
-                    <figure class="effect-lexi">
-                        <img src="images/salon.jpg" alt="" class="img-fluid neg-z-index" />                        
-                    </figure>
-                    <small class="credit">
-                        <a href="https://www.pexels.com/photo/woman-sitting-on-the-salon-chair-while-holding-vodka-glass-and-man-at-her-back-white-spraying-her-hair-696287/" target="_blank">Photo by Valeria Boltneva from Pexels</a>
-                    </small>
-                </div>
-            </div>
-            <div class="row w3ls-interior-design-grids">
-                <div class="col-lg-6 w3ls-interior-design-grid-left">
-                    <figure class="effect-lexi">
-                        <img src="images/restaurant.jpg" alt="" class="img-fluid" />
-                    </figure>
-                    <small class="credit">
-                        <a href="https://unsplash.com/photos/Orz90t6o0e4" target="_blank">Photo by Pablo Merchán Montes on Unsplash</a>
-                    </small>
-                </div>
-                <div class="col-lg-6 w3ls-interior-design-grid-right">
-                    <div class="row card-info card-info-right">
-                        <h3>
-                            Restaurant
-                        </h3>
-                        <p>
-                            A restaurant, or an eatery, is a business which prepares and serves food and drinks to customers in exchange for money. Meals are generally served and eaten on the premises, but many restaurants also offer take-out and food delivery services, and some offer only take-out and delivery. Restaurants vary greatly in appearance and offerings, including a wide variety of cuisines and service models ranging from inexpensive fast food restaurants and cafeterias to mid-priced family restaurants, to high-priced luxury establishments.
-                            In Western countries, most mid- to high-range restaurants serve alcoholic beverages such as beer and wine.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row w3ls-interior-design-grids">
-                <div class="col-lg-6 w3ls-interior-design-grid-right">
-                    <div class="row card-info card-info-left">
-                        <h3>
-                            real estate
-                        </h3>
-                        <p>
-                            Real estate is "property consisting of land and the buildings on it, along with its natural resources such as crops, minerals or water; immovable property of this nature; an interest vested in this (also) an item of real property, (more generally) buildings or housing in general. Also: the business of real estate; the profession of buying, selling, or renting land, buildings, or housing."[1] It is a legal term used in jurisdictions whose legal system is derived from English common law, such as India, the United Kingdom, United States, Canada, Pakistan, Australia, and New Zealand.
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-6 w3ls-interior-design-grid-left">
-                    <figure class="effect-lexi">
-                        <img src="images/real-estate.jpg" alt="" class="img-fluid neg-z-index" />
-                    </figure>
-                    <small class="credit">
-                        <a href="https://unsplash.com/photos/XbwHrt87mQ0" target="_blank">Photo by Brian Babb on Unsplash</a>
-                    </small>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- /-designs -->
-
-    <!-- video starts here -->
-    <div class="container-fluid q-1">
-        <div class="center-container py-4 py-sm-5">
-            <div class="w3ls-video-info py-lg-5">
-                <div class="container">
-                    <h1 class="heading1">What separates design from art is that design is meant to be...
-                        <br>functional.</h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ut risus eget libero finibus
-                        facilisis.
-                        Phasellus tempus hendrerit sem ut tempus sem.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- video ends here -->
-
-    <!-- team starts here -->
-    <!-- <div class="container content text-center py-5" id="section5">
-        <header class="w3-heading py-lg-5 pb-md-5 pb-4">
-            <h3>Our Partners</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-        </header> -->
-    <!-- //end heading -->
-
-    <!-- <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="team-members">
-                    <div class="team-avatar">
-                        <img class="img-fluid" src="images/member1.jpg" alt="">
-                    </div>
-                    <div class="team-desc">
-                        <h4>Member 1</h4>
-                        <span>Marketing</span>
-                        <ul class="d-flex justify-content-center py-3 social-icons">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="mx-3">
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="team-members">
-                    <div class="team-avatar">
-                        <img class="img-fluid" src="images/member2.jpg" alt="">
-                    </div>
-                    <div class="team-desc">
-                        <h4>Member 2</h4>
-                        <span>Founder</span>
-                        <ul class="d-flex justify-content-center py-3 social-icons">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="mx-3">
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 offset-sm-3 offset-md-0">
-                <div class="team-members">
-                    <div class="team-avatar">
-                        <img class="img-fluid" src="images/member3.jpg" alt="">
-                    </div>
-                    <div class="team-desc">
-                        <h4>Member 3</h4>
-                        <span>Director</span>
-                        <ul class="d-flex justify-content-center py-3 social-icons">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="mx-3">
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    <!-- //end row -->
-
-    <!-- our partners -->
-    <!-- <div class="row">
-            <div class="col-md-4 col-sm-6">
-                <div class="team-members">
-                    <div class="team-avatar">
-                        <img class="img-fluid" src="images/member4.jpg" alt="">
-                    </div>
-                    <div class="team-desc">
-                        <h4>Member 1</h4>
-                        <span>Marketing</span>
-                        <ul class="d-flex justify-content-center py-3 social-icons">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="mx-3">
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="team-members">
-                    <div class="team-avatar">
-                        <img class="img-fluid" src="images/member5.jpg" alt="">
-                    </div>
-                    <div class="team-desc">
-                        <h4>Member 2</h4>
-                        <span>Founder</span>
-                        <ul class="d-flex justify-content-center py-3 social-icons">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="mx-3">
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6 offset-sm-3 offset-md-0">
-                <div class="team-members">
-                    <div class="team-avatar">
-                        <img class="img-fluid" src="images/member6.jpg" alt="">
-                    </div>
-                    <div class="team-desc">
-                        <h4>Member 3</h4>
-                        <span>Director</span>
-                        <ul class="d-flex justify-content-center py-3 social-icons">
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="mx-3">
-                                <a href="#">
-                                    <i class="fab fa-twitter"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fab fa-google-plus-g"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    <!-- //end row -->
-
-
-    <!-- </div> -->
-
-
-    <!-- team ends here -->
-
-    <!-- news starts here -->
-    <section class="news pb-5" id="section6">
-        <div class="container">
-            <header class="w3-heading py-lg-5 pb-md-5 pb-4 text-center">
-                <h3>Our News</h3>
-                <p>Lorem Ipsum is simply dummy text and typesetting industry.</p>
-            </header>
-            <!-- //end heading -->
-            <div class="card-columns">
-                <div class="col-lg-12">
-                    <div class="card">
-                         <img src="{% static 'images/ae080fa2df03879d023251723eb3f133.png' %}" alt="Card image cap" class="card-img-top"/>
-                        <div class="card-body">
-                            <h5 class="card-title">New DIGI TV Starts Broadcasting</h5>
-                            <p class="card-text">Today, long-awaited, New DIGI TV has been launched. In a technology
-                                modernization process, up to
-                                15 000 set-top-box device replacements will be carried out every month.</p>
-                            <a href="#" class="btn more p-0 mt-3" data-toggle="modal" data-target="#exampleModal">Read
-                                More</a>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">New DIGI TV Starts
-                                                Broadcasting</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                             <img src="{% static 'images/ae080fa2df03879d023251723eb3f133.png' %}" alt="Card image cap" class="card-img-top"/>
-                                            <p class="my-3">Today, long-awaited, New DIGI TV has been launched. In a
-                                                technology modernization
-                                                process, up to 15 000 set-top-box device replacements will be carried
-                                                out
-                                                every
-                                                month. Overall investments of LAMA ENERGY GROUP, the owner of DIGI TV,
-                                                are
-                                                estimated
-                                                at up to 300 million CZK.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- /Modal -->
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="card p-3">
-                        <blockquote class="blockquote mb-0 card-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                            <footer class="blockquote-footer mt-2">
-                                <small class="text-muted">
-                                    Someone famous in
-                                    <cite title="Source Title">Source Title</cite>
-                                </small>
-                                <a href="#" class="btn more p-0 mt-3" data-toggle="modal" data-target="#exampleModal3">Read
-                                    More</a>
-                                <!-- Modal -->
-                                <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel3"
-                                    aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel3">Title goes here</h5>
-                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                </button>
+                                    <div class="col-lg-7">
+                                        <div class="row host-row">
+                                            <div class="col-lg-6">
+                                                <!-- <div class="row">
+                                                    <div class="col-lg-3 img-col">
+                                                        <img src="images/icons/icon-3.png" alt="" class="img-responsive">
+                                                    </div>
+                                                </div> -->
+                                                <div class="row">
+                                                    <div class="col-lg-10">
+                                                        <h4>Earn Bonus</h4>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <div class="modal-body">
-                                                <p class="my-3">This is a longer card with supporting text below as a
-                                                    natural lead-in to additional
-                                                    content. This content is a little bit longer. There are many
-                                                    variations
-                                                    of
-                                                    passages of Lorem Ipsum available, but the majority have suffered
-                                                    alteration
-                                                    in some form, by injected humour, or randomised words which don't
-                                                    look
-                                                    even
-                                                    slightly believable. If you are going to use a passage of Lorem
-                                                    Ipsum,
-                                                    you
-                                                    need to be sure there isn't anything embarrassing hidden in the
-                                                    middle
-                                                    of
-                                                    text. All the Lorem Ipsum generators on the Internet tend to repeat
-                                                    predefined
-                                                    chunks as necessary, making this the first true generator on the
-                                                    Internet.
-                                                    It uses a dictionary of over 200 Latin words, combined with a
-                                                    handful
-                                                    of
-                                                    model sentence structures, to generate Lorem Ipsum which free from
-                                                    etc.</p>
+                                            <div class="col-lg-6">
+                                                <!-- <div class="row">
+                                                    <div class="col-lg-3 img-col">
+                                                        <img src="images/icons/better-reviews.png" alt="Better Reviews" class="img-responsive">
+                                                    </div>
+                                                </div> -->
+                                                <div class="row">
+                                                    <div class="col-lg-10">
+                                                        <h4>Better reviews from Guests</h4>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row host-row">
+                                            <div class="col-lg-6">
+                                                <!-- <div class="row">
+                                                    <div class="col-lg-3 img-col">
+                                                        <img src="images/icons/refer.png" alt="Refer Other" class="img-responsive">
+                                                    </div>
+                                                </div> -->
+                                                <div class="row">
+                                                    <div class="col-lg-10">
+                                                        <h4>Refer Others for Bonus</h4>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <!-- <div class="row">
+                                                    <div class="col-lg-3 img-col">
+                                                        <img src="images/icons/send-message.png" alt="Send Message" class="img-responsive">
+                                                    </div>
+                                                </div> -->
+                                                <div class="row">
+                                                    <div class="col-lg-10">
+                                                        <h4>Send Message to Guests</h4>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                        </p>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <!-- /Modal -->
-                            </footer>
-                        </blockquote>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="card">
-                         <img src="{% static 'images/98b4a367bf4ae97968884a2fb8e0b4c3.jpg' %}" alt="Card image cap" class="card-img-top"/>
-                        <div class="card-body">
-                            <h5 class="card-title">LAMA ENERGY GROUP acquires DIGI CZ from RCS&RDS</h5>
-                            <p class="card-text">LAMA ENERGY GROUP s.r.o. (LAMA), a Czech privately owned investment
-                                group
-                                engaged primarily in the
-                                exploration...
-                            </p>
-                            <p class="card-text">
-                                <small class="text-muted">Last updated 3 mins ago</small>
-                            </p>
-                            <a href="#" class="btn more p-0 mt-3" data-toggle="modal" data-target="#exampleModal4">Read
-                                More</a>
-                            <!-- Modal -->
-                            <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel4"
-                                aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel4">LAMA ENERGY GROUP acquires
-                                                DIGI
-                                                CZ from RCS&RDS</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                             <img src="{% static 'images/98b4a367bf4ae97968884a2fb8e0b4c3.jpg' %}" alt="Card image cap" class="card-img-top"/>
-                                            <p class="my-3">LAMA ENERGY GROUP s.r.o. (LAMA), a Czech privately owned
-                                                investment group engaged
-                                                primarily in the exploration, production and sale of oil & gas and
-                                                production
-                                                and sale of utilities, has acquired DIGI Czech Republic s.r.o. (DIGI
-                                                CZ)
-                                                from
-                                                RCS & RDS S.A. (RCS&RDS), a major telecommunication operator in
-                                                South-Eastern
-                                                Europe head-quartered in Romania. DIGI CZ is a leading Czech
-                                                direct-to-home
-                                                (DTH)
-                                                operator. The transaction was completed on 21th April, 2015. The
-                                                parties
-                                                have
-                                                agreed not to disclose the transaction value.</p>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="guest">
+                                <div class="row flex-box">
+                                    <div class="col-lg-5">
+                                         <img src="{% static 'images/guest.jpg' %}" alt="Guest Image" class="img-responsive"/>
+                                    </div>
+                                    <div class="col-lg-7">
+                                        <div class="row guest-row">
+                                            <div class="col-lg-6">
+                                                <!-- <div class="row">
+                                                    <div class="col-lg-3 img-col">
+                                                        <img src="images/icons/icon-2.png" alt="Sign up Icon" class="img-responsive">
+                                                    </div>
+                                                </div> -->
+                                                <div class="row">
+                                                    <div class="col-lg-10">
+                                                        <h4>Free Sign Up</h4>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                                            text ever since the 1500s
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <!-- <div class="row">
+                                                    <div class="col-lg-3 img-col">
+                                                        <img src="images/icons/icon-lt.png" alt="Bonus Icon" class="img-responsive">
+                                                    </div>
+                                                </div> -->
+                                                <div class="row">
+                                                    <div class="col-lg-10">
+                                                        <h4>Referral Bonuses</h4>
+                                                        <p>
+                                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
+                                                            text ever since the 1500s
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- /Modal -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- news ends here -->
+    </div>
+    <!---->
 
-    <!-- Testimonials Section -->
-    <section class="testimonials content-section" id="section7">
+    <!---->
+    <div class="video">
         <div class="container">
-            <header class="w3-heading py-lg-5 pt-5 text-center">
-                <h3 class="text-white">Testimonials</h3>
-                <p class="diff">Lorem Ipsum is simply dummy text and typesetting industry.</p>
-            </header>
-            <!-- //end heading -->
-            <div class="row text-center">
-
-                <div class="col-md-8 offset-md-2">
-                    <div class="client-testimonials owl-carousel owl-theme">
-
-                        <div class="item">
-                            <p class="speech"> It is a long established fact that a reader will be distracted by the
-                                readable content of a page
-                                when looking at its layout. The point of using Lorem Ipsum is that it has a
-                                more-or-less
-                                normal distribution of letters, as opposed to using 'Content here, content here',
-                                making
-                                it look like readable English.</p>
-                            <div class="client-info">
-                                 <img src="{% static 'images/member1.jpg' %}" alt=""/>
-                                <h4>Smith Stone</h4>
-                                <span>Sed amet Productions</span>
-                            </div>
-                        </div>
-                        <!-- /.item -->
-
-                        <div class="item">
-                            <p class="speech">Contrary to popular belief, Lorem Ipsum is not simply random text. It has
-                                roots in a piece of
-                                classical Latin literature from 45 BC, making it over 2000 years old. Richard
-                                McClintock,
-                                a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more
-                                obscure
-                                Latin words, consectetur.</p>
-                            <div class="client-info">
-                                <img src="{% static 'images/member3.jpg' %}" alt=""/>
-                                <h4>John Doe</h4>
-                                <span>Dolor Associates</span>
-                            </div>
-                        </div>
-                        <!-- /.item -->
-
-                        <div class="item">
-                            <p class="speech">The standard chunk of Lorem Ipsum used since the 1500s is reproduced
-                                below for those interested.
-                                Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
-                                reproduced
-                                in their exact original form.</p>
-                            <div class="client-info">
-                                <img src="{% static 'images/member4.jpg' %}" alt=""/>
-                                <h4>Andrew Hill</h4>
-                                <span>Lorem ipsum Inc.</span>
-                            </div>
-                        </div>
-                        <!-- /.item -->
-
-                    </div>
-                    <!-- /.client-testimonials -->
+            <div class="col-lg-12 card-wrapper">
+                <div class="video-text text-center">
+                    <h2>Watch Video</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 </div>
-                <!-- /.col-md-8 -->
-
+                <div class="video-play ">
+                    <div class="playing">
+                        <iframe src="https://www.youtube.com/embed/dA2F0qScxrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h4 class="wow fadeInLeft" data-wow-delay="0.5s">
+                        <a href="#" class="p1">Trusted by 100+ users</a>
+                    </h4>
+                    <h4 class="wow fadeInUp" data-wow-delay="0.5s">
+                        <a href="#" class="p2">Video Documentation</a>
+                    </h4>
+                    <h4 class="wow fadeInRight" data-wow-delay="0.5s">
+                        <a href="#" class="p3">24/7 Chat Support</a>
+                    </h4>
+                </div>
             </div>
-            <!-- /.row -->
         </div>
-        <!-- /.container -->
-    </section>
-    <!-- /#testimonials -->
+    </div>
 
-
-    <!-- Contact section -->
-    <section class="contact content-section" id="section8">
+    <div id="contact" class="contact">
         <div class="container">
-            <header class="w3-heading py-lg-5 pt-5 text-center">
-                <h3>Contact Us</h3>
-                <p>Lorem Ipsum is simply dummy text and typesetting industry.</p>
-            </header>
-            <!-- //end heading -->
-            <div class="row form-container py-3">
-
-                <div class="col-md-8 contact-form">
-                    <h4 class="mb-4">Drop us a line</h4>
-                    <form id="contactForm" method="post" action="#">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Your Name..."
-                                value="" required>
+            <div class="col-lg-12 card-wrapper">
+                <div class="contact-text text-center">
+                    <h2>Contact</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="col-md-6 text-box">
+                            <input class="wow fadeInLeft" data-wow-delay="0.5s" type="text" placeholder="Name" />
+                            <input class="wow fadeInLeft" data-wow-delay="0.5s" type="text" placeholder="Email" />
+                            <input class="wow fadeInLeft" data-wow-delay="0.5s" type="text" placeholder="Subject" />
                         </div>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="email" name="email" placeholder="Your email..."
-                                value="" required>
+                        <div class="col-md-6 textarea">
+                            <textarea class="wow fadeInRight" data-wow-delay="0.5s" placeholder="Message"></textarea>
+                            <input class="wow fadeInRight" data-wow-delay="0.5s" type="submit" value="SUBMIT" />
                         </div>
-                        <div class="form-group">
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone..."
-                                value="" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="4" name="message" placeholder="Your message..."
-                                required></textarea>
-                        </div>
-                        <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-default">
-                                <i class="fa fa-paper-plane fa-fw"></i> Send</button>
-                        </div>
+                        <div class="clearfix"> </div>
                     </form>
                 </div>
-                <!-- /.contact-form -->
-
-                <div class="col-md-4 agile-w3ls-contact-address mt-sm-4 mt-0">
-                    <h4 class="mb-4">Our address</h4>
-                    <address>
-                        <p class="my-3 d-flex">
-                            <i class="fa fa-map-marker fa-fw mr-2"></i>
-                            <label>56th lorem, New York, ipsum sed, United States</label>
-                        </p>
-                        <ul>
-                            <li class="my-3">
-                                <i class="fa fa-envelope fa-fw mr-2"></i>
-                                <a href="mailto:info@example.com">example.com</a>
-                            </li>
-                            <li class="my-3">
-                                <i class="fa fa-phone fa-fw mr-2"></i>+56 (0) 985 0011 002</li>
-                        </ul>
-                    </address>
-                </div>
-                <!-- /.contact-address -->
-
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container -->
-
-        <div class="container-fluid w3-agile-google-map pt-5">
-            <div class="row">
-                <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d222388.83190354658!2d-95.03636762842909!3d29.433896187376057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x863f7912a0edb117%3A0x862d9cbcadeeb4e1!2sTexas+City%2C+TX%2C+USA!5e0!3m2!1sen!2snp!4v1539584165854"
-                    style="border:0" allowfullscreen></iframe>
-            </div>
-            <!-- /.row -->
-        </div>
-        <!-- /.container-fluid -->
-    </section>
-
-    <!-- Footer -->
-    <footer id="footer">
-        <div class="container-fluid quick-links py-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <h4>Our Services & Products</h4>
-                        <ul>
-                            <li>
-                                <a href="#">Gas and Electricity</a>
-                            </li>
-                            <li>
-                                <a href="#">Petroleum Products</a>
-                            </li>
-                            <li>
-                                <a href="#">Mining of Commodities</a>
-                            </li>
-                            <li>
-                                <a href="#">Mobile Operator</a>
-                            </li>
-                            <li>
-                                <a href="#">TV and Internet</a>
-                            </li>
-                            <li>
-                                <a href="#">Scrap Iron and Chemicals</a>
-                            </li>
-                            <li>
-                                <a href="#">Realty</a>
-                            </li>
-                            <li>
-                                <a href="#">Investments and Projects</a>
-                            </li>
-                            <li>
-                                <a href="#">Heating Industry</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4">
-                        <h4>The customers</h4>
-                        <ul>
-                            <li>
-                                <a href="#">Gas and Electricity for Households and Companies </a>
-                            </li>
-                            <li>
-                                <a href="#">Mobile Operator</a>
-                            </li>
-                            <li>
-                                <a href="#">TV and Internet</a>
-                            </li>
-                            <li>
-                                <a href="#">Customer Service</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4">
-                        <h4>Press and Media</h4>
-                        <ul>
-                            <li>
-                                <a href="#">News</a>
-                            </li>
-                            <li>
-                                <a href="#">Gallery</a>
-                            </li>
-                            <li>
-                                <a href="#">Contacts</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
-        <div class="container py-3">
-
-            <div class="row text-center">
-                <div class="col-md-12 w3-social segment">
-                    <h4>Stay Connected</h4>
-                    <ul class="social-icons d-flex justify-content-center">
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-twitter"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fab fa-google-plus-g"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.col-md-12 -->
+    </div>
+    <!---->
+    <div class="footer">
+        <div class="container">
+            <div class="ftr-logo">
+                <a class="wow bounceIn" data-wow-delay="0.5s" href="index.html">
+                    <img src="{% static 'images/logo_house_white.png' %}" alt="TripTnT"/>
+                </a>
             </div>
-            <!-- /.row -->
+            <div class="copy-right wow bounceInUp" data-wow-delay="0.5s">
+                <p>Copyright &#169; 2018 Trip TnT . All Rights Reserved.</p>
+            </div>
 
         </div>
-        <!-- /.container -->
+    </div>
 
-        <div class="w3l-copynote py-3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <p> &copy; 2018. LAMA Group. All rights reserved | Design by
-                            <a href="http://www.infodev.com.np/" target="_blank">InfoDevelopers</a>
-                        </p>
-                    </div>
-                    <!-- /.col-md-12 -->
-
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container -->
-        </div>
-        <!-- /.copynote -->
-
-        <a href="#" id="toTop" style="display: block;">
-            <span id="toTopHover" style="opacity: 1;"> </span>
-        </a>
-    </footer>
-    <!-- /.footer -->
-    <button class="open-button" onclick="openForm()">Chat</button>
-
-    <div class="chat-popup form-container2" id="myForm">
+    <button class="open-button" onclick="openForm()" style="background-color: #ef8e91;color: white;border: none;
+    cursor: pointer;  position: fixed;  bottom: 5px;right: 80px;  width: 70px;height: 70px;   border-radius: 70px;    z-index: 1;">Chat</button>
+ <div class="chat-popup form-container2" id="myForm" style="width: 300px;">
         <div class="row alert alert-success" style="padding-left: 0px; padding-right: 0px;color: #eaeaea;background-color: #1c61a0; border-color: #1c61a0;border: none;border-radius: 0px;"> 
             <div class="col-md-9 col">
                 <h5>LAMA BOT</h5>
@@ -1361,103 +550,103 @@
             </div>
         </div>     
         <select class="form-control" id="room-name-input">
-            <option selected="selected">Restaurant</option>
-                                <option>Insurance</option>
+            <option selected="selected">TNTBot</option>
+              
                             
-        </select>
-            <input id="room-name-submit" type="button" value="Enter"/>    
-        
+        </select><br>
+            <button id="room-name-submit" class="btn btn-info">Enter</button>        
     </div>
+    <!---->
 
-    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
-    <script src="{% static 'js/index.js' %}"></script>
-    <!-- stats -->
-    <script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
-    <script src="{% static 'js/jquery.countup.js' %}"></script>
 
-    <!-- owl carousel -->
-    <script src="{% static 'js/owl.carousel.js' %}"></script>
-
-    <!-- start-smooth-scrolling -->
+    <a href="#to-top" id="toTop" style="display: block;">
+        <span id="toTopHover" style="opacity: 1;"> </span>
+    </a>
+    <!---->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+     crossorigin="anonymous"></script>
+    <script>
+        //$(document).ready(function () {
+            //$('#justModal').modal('show');
+        //});
+    </script>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!--/animated-css-->
+    <!--script-->
     <script src="{% static 'js/move-top.js' %}"></script>
     <script src="{% static 'js/easing.js' %}"></script>
-
-    <!-- jQuery-Photo-filter-lightbox-Gallery-plugin -->
-    <!-- <script src="{% static 'js/jquery-1.7.2.js' %}"></script> -->
-    <script src="{% static 'js/jquery.quicksand.js' %}"></script>
-    <script src="{% static 'js/script.js"></script>
-    <script src="{% static 'js/jquery.prettyPhoto.js' %}"></script>
-    <!-- //jQuery-Photo-filter-lightbox-Gallery-plugin -->
-
-
-    <script src="{% static 'js/bootstrap.js' %}"></script>
-    <!-- video js file -->
-    <script src="{% static 'js/jquery.vide.min.js' %}"></script>
-    <!-- /video js file -->
-
-    <!-- custom js file -->
-    <script src="{% static 'js/universe.js' %}"></script>
-    <!-- /custom js file -->
-
-    <script>
-        var owl = $('.owl-carousel');
-        owl.owlCarousel({
-            items: 1,
-            loop: true,
-            margin: 10,
-            autoplay: true,
-            autoplayTimeout: 5000,
-            autoplayHoverPause: false,
-            center: true,
-            animateOut: 'fadeOut',
-            animateIn: 'fadeIn',
-            autoplayHoverPause: true,
-            touchDrag: true,
-            nav: true,
-            dots: false
+    <!--/script-->
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
+            });
         });
     </script>
-    <script>
+    <script type="text/javascript">
         $(document).ready(function () {
-            // executes when HTML-Document is loaded and DOM is ready
-
-            // breakpoint and up  
-            $(window).resize(function () {
-                if ($(window).width() >= 980) {
-
-                    // when you hover a toggle show its dropdown menu
-                    $(".navbar .dropdown-toggle").hover(function () {
-                        $(this).parent().toggleClass("show");
-                        $(this).parent().find(".dropdown-menu").toggleClass("show");
-                    });
-
-                    // hide the menu when the mouse leaves the dropdown
-                    $(".navbar .dropdown-menu").mouseleave(function () {
-                        $(this).removeClass("show");
-                    });
-
-                    // do something here
+            /*
+            var defaults = {
+            containerID: 'toTop', // fading element id
+            containerHoverID: 'toTopHover', // fading element hover id
+            scrollSpeed: 1200,
+            easingType: 'linear' 
+            };
+            */
+            $().UItoTop({ easingType: 'easeOutQuart' });
+        });
+    </script>
+    <script>                    
+        $("span.menu").click(function () {
+            $(".top-menu ul").slideToggle("slow", function () {
+            });
+        });
+    </script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $("#flexiselDemo1").flexisel({
+                visibleItems: 4,
+                animationSpeed: 1000,
+                autoPlay: true,
+                autoPlaySpeed: 3000,
+                pauseOnHover: true,
+                enableResponsiveBreakpoints: true,
+                responsiveBreakpoints: {
+                    portrait: {
+                        changePoint: 480,
+                        visibleItems: 1
+                    },
+                    landscape: {
+                        changePoint: 640,
+                        visibleItems: 2
+                    },
+                    tablet: {
+                        changePoint: 768,
+                        visibleItems: 3
+                    }
                 }
             });
 
-
-
-            // document ready  
         });
     </script>
+     <script src="{% static 'js/jquery.flexisel.js' %}"></script>
     <script>
-
         $(window).on('scroll', function () {
             if ($(window).scrollTop()) {
-                $('nav').addClass('scroll-down');
+                $('nav').addClass('tntNavbar');
             }
             else {
-                $('nav').removeClass('scroll-down');
+                $('nav').removeClass('tntNavbar');
             }
         })
-
     </script>
-    <script>
+<script>
         function openForm() {
             document.getElementById("myForm").style.display = "block";
         }
@@ -1480,63 +669,6 @@
         
         };
     </script>
-    <script>
-        var roomName = {{ room_name_json }};
-
-    var chatSocket = new WebSocket(
-        'ws://' + window.location.host +
-        '/ws/chat/' + roomName + '/');
-
-    chatSocket.onmessage = function(e) {
-        var data = JSON.parse(e.data);
-        var message = data['message'];
-        var reply = data['reply'];
-
-        // document.querySelector('#chat-log').value += (message + '\n');
-        document.querySelector('#chat-log').value += ("You:" + message + '\n');
-        document.querySelector('#chat-log').value += ("Bot:" + reply + '\n' );
-        document.querySelector('#room-name-input').value;
-
-    };
-
-    var textarea = document.getElementById('chat-log');
-    setInterval(function(){
-        textarea.scrollTop = textarea.scrollHeight;
-        break
-    }); 
-
-    chatSocket.onclose = function(e) {
-        console.error('Chat socket closed unexpectedly');
-    };
-
-    document.querySelector('#chat-message-input').focus();
-    document.querySelector('#chat-message-input').blur = function(e) {
-        if (e.keyCode === 13) {  // enter, return
-            document.querySelector('#chat-message-submit').click();
-        }
-    };
-    document.querySelector('#chat-message-input').keyup = function(e) {
-        if (e.keyCode === 13) {  // enter, return
-            document.querySelector('#chat-message-submit').click();
-        }
-    };
-
-    document.querySelector('#chat-message-submit').onclick = function(e) {
-        e.preventDefault();
-        messageInputDom = document.querySelector('#chat-message-input');
-        console.log(messageInputDom);
-        var message = messageInputDom.value;
-        console.log(message);
-        chatSocket.send(JSON.stringify({
-            'message': message
-        }));
-
-        // messageInputDom.value = '';
-    };
-    </script>
-
 </body>
 
 </html>
-
-

@@ -11,7 +11,7 @@ import random
 
 # import our chat-bot intents file
 import json
-with open('rest_update.json') as json_data:
+with open('tnt.json') as json_data:
     intents = json.load(json_data)
 
 words = []
@@ -27,10 +27,10 @@ for intent in intents['intents']:
         # add to our words list
         words.extend(w)
         # add to documents in our corpus
-        documents.append((w, intent['intention']))
+        documents.append((w, intent['intent']))
         # add to our classes list
-        if intent['intention'] not in classes:
-            classes.append(intent['intention'])
+        if intent['intent'] not in classes:
+            classes.append(intent['intent'])
 
 
 # stem and lower each word and remove duplicates

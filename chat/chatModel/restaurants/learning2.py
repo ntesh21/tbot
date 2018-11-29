@@ -20,7 +20,7 @@ train_y = data['train_y']
 
 # import our chat-bot intents file
 import json
-with open('chat/chatModel/restaurants/rest_update.json') as json_data:
+with open('chat/chatModel/restaurants/tnt.json') as json_data:
 	intents = json.load(json_data)
 
 # Build neural network
@@ -87,12 +87,12 @@ def response(sentence, userID='123', show_details=False):
     results = classify(sentence)
     # if we have a classification then find the matching intent tag
     if results:
-        if results[0][1]>0.75:
+        if results[0][1]>0.30:
             # loop as long as there are matches to process
             while results:
                 for i in intents['intents']:
                     # find a tag matching the first result
-                    if i['intention'] == results[0][0]:
+                    if i['intent'] == results[0][0]:
                         reply = i['reply']
                         answer = reply[0]
                         return answer
