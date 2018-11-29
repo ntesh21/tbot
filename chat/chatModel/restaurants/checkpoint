@@ -1,2 +1,2 @@
-model_checkpoint_path: "/home/parajuli/Desktop/lama-group/lama_group/chat/chatModel/restaurants/model2.tflearn"
-all_model_checkpoint_paths: "/home/parajuli/Desktop/lama-group/lama_group/chat/chatModel/restaurants/model2.tflearn"
+model_checkpoint_path: "/home/pudding/Desktop/lama-group/lama_group/chat/chatModel/restaurants/model2.tflearn"
+all_model_checkpoint_paths: "/home/pudding/Desktop/lama-group/lama_group/chat/chatModel/restaurants/model2.tflearn"
