@@ -270,6 +270,23 @@
   "intent": "cleaner", 
   "query": ["Can i register as a Cleaner?"], 
   "reply": ["You can become cleaner through Master Tasker invitation only"]},
+
+{
+  "intent": "tasker", 
+  "query": ["i want to be a tasker."], 
+  "reply": ["you have to contact your taskmaster. for more information please visit here"]},
+
+{
+  "intent": "tasker", 
+  "query": ["i want to be a tasker."], 
+  "reply": ["you have to contact your taskmaster. for more information please visit here"]},
+
+{
+  "intent": "tasker", 
+  "query": ["i dont have an email address, can i be a takser?"], 
+  "reply": ["you have to contact your taskmaster. for more information please visit here"]},
+
+
 {
   "intent": "cleaner", 
   "query": ["can i be the cleaner"], 
@@ -411,7 +428,41 @@
     "intent": "payment_gateway", 
     "query": ["How can i pay for points"], 
     "reply": ["Currently we are using Stripe payment gateway as our primary payment method."]
+  },
+
+
+  {
+    "intent": "reward_system", 
+    "query": ["is there any rewards system for guest"], 
+    "reply": ["Yes we have special rewards system. please find the link for further information."]
+  },
+
+  {
+    "intent": "reward_system", 
+    "query": ["any reward systems"], 
+    "reply": ["Yes we have special rewards system. please find the link for further information."]
+  },
+
+  {
+    "intent": "listing", 
+    "query": ["how can i add my listings to triptnt"], 
+    "reply": ["Please find more information about listing here"]
+  },
+
+  {
+    "intent": "listing", 
+    "query": ["how to add multiple listings"], 
+    "reply": ["Please find more information about listing here."]
+  },
+
+   {
+    "intent": "listing", 
+    "query": ["how can i add my listings"], 
+    "reply": ["Please find more information about listing here."]
   }
+
+
+
 
  ]
 }
