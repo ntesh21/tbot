@@ -17,55 +17,91 @@
 
 	{"intent": "procedure_for_co-host_register", 
 	"query": ["how can i become co-host"], 
-	"reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]},
+	"reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]},
+
+  {"intent": "procedure_for_co-host_register", 
+  "query": ["how can i be co-host"], 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]},
+
+  {"intent": "procedure_for_co-host_register", 
+  "query": ["how can i become cohost"], 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]},
 	
 	{"intent": "procedure_for_co-host_register", 
 	"query": ["I wonder if you can guide me about the procedure for becoming co-host"], 
-	"reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]}, 
+	"reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]},
+
+  {"intent": "procedure_for_co-host_register", 
+  "query": ["I wonder if you can guide me about the procedure for becoming cohost"], 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]},  
+
+  {"intent": "procedure_for_co-host_register", 
+  "query": ["I wonder if you can guide me about the procedure for becoming co-host"], 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]}, 
 	
 	{"intent": "procedure_for_host_register", 
 	"query": ["I was wondering if you could tell me about the procedure to become a host"],
-	"reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/host/'>Register as host</a>"]},
+	"reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/host/'>Register as host</a>"]},
  	
  	{"intent": "procedure_for_host_register",
  	 "query": ["how can i become a host"], 
- 	 "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/host/'>Register as host</a>"]},
+ 	 "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/host/'>Register as host</a>"]},
+
+  {"intent": "procedure_for_host_register",
+   "query": ["how can i be a host"], 
+   "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/host/'>Register as host</a>"]},
 
  	{"intent": "procedure_for_host_register", 
  	 "query": ["please tell me the procedure to become a host"], 
- 	 "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/host/'>Register as host</a>"]}, 
+ 	 "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/host/'>Register as host</a>"]}, 
+
+   {"intent": "procedure_for_host_register", 
+   "query": ["please tell me the procedure to become a host"], 
+   "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/host/'>Register as host</a>"]}, 
 
  	{"intent": "procedure_for_guest_register", 
- 	 "query": ["I want to register as a guest . how can i do that"], 
- 	 "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/guest/'>Register as guest</a>"]}, 
+ 	 "query": ["how can i be guest"], 
+ 	 "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/guest/'>Register as guest</a>"]}, 
 
  	{"intent": "procedure_for_guest_register", 
  	 "query": ["I want to register as a guest. tell me how can i do that"], 
- 	 "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/guest/'>Register as guest</a>"]}, 
+ 	 "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/guest/'>Register as guest</a>"]}, 
 
  	{"intent": "procedure_for_guest_register", 
  	 "query": ["process for guest registration"], 
- 	 "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/guest/'>Register as guest</a>"]}, 
+ 	 "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/guest/'>Register as guest</a>"]}, 
 
  	{"intent": "request_change_checkout_time_for_host_register", 
  	 "query": ["change my checkout time, I am the guest"], 
- 	 "reply": ["yes you can change your checkout time here <a href='http://40.122.109.2/guest/change/'>Change Check-In Checkout Time</a>"]}, 
+ 	 "reply": ["You can change your checkout time here <a href='http://40.122.109.2/guest/change/'>Change Check-In Checkout Time</a>"]}, 
   
   {"intent": "procedure_for_master_cleaner_register", 
   "query": ["how can i become master cleaner"], 
-  "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]},
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]},
+
+  {"intent": "procedure_for_master_cleaner_register", 
+  "query": ["how can i be master cleaner"], 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]},
   
   {"intent": "procedure_for_master_cleaner_register", 
   "query": ["I wonder if you can guide me about the procedure for becoming master cleaner"], 
-  "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]}, 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]},
+
+  {"intent": "procedure_for_master_cleaner_register", 
+  "query": ["how do i sign as master cleaner"], 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]},
+
+  {"intent": "procedure_for_master_cleaner_register", 
+  "query": ["what should i do to signup as master cleaner"], 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]},  
   
   {"intent": "procedure_for_master_cleaner_register", 
   "query": ["I was wondering if you could tell me about the procedure to become a master cleaner"],
-  "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]},
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]},
   
   {"intent": "procedure_for_master_cleaner_register",
    "query": ["process for master cleaner registration"], 
-   "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]},
+   "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]},
   
   {"intent": "request_change_checkout_time_for_host_register", 
    "query": ["change my checkout time, I am the guest"], 
@@ -74,96 +110,96 @@
  
   {"intent": "procedure_for_host_register", 
   "query": ["how can i become host"], 
-  "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/host/'>Register as host</a>"]},
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/host/'>Register as host</a>"]},
   
   {"intent": "procedure_for_host_register", 
   "query": ["info on host registration"], 
-  "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/host/'>Register as host</a>"]}, 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/host/'>Register as host</a>"]}, 
   
   {"intent": "procedure_for_guest_register", 
   "query": ["info on guest registration"], 
-  "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/guest/'>Register as guest</a>"]}, 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/guest/'>Register as guest</a>"]}, 
 
 
   {"intent": "procedure_for_co-host_register", 
   "query": ["info on co host registration"], 
-  "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]}, 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]}, 
 
   {"intent": "procedure_for_co-host_register", 
   "query": ["info on co-host registration"], 
-  "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]}, 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/cohost/'>Register as co-host</a>"]}, 
 
   {"intent": "procedure_for_master_cleaner_register", 
   "query": ["info on master cleaner registration"], 
-  "reply": ["After signing up at Trip TnT,you can register here <a href=http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]}, 
+  "reply": ["After signing up at Trip TnT,you can register here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>"]}, 
 
   {"intent": "point_information", 
  	 "query": ["As a guest can I earn points?"], 
- 	 "reply": ["Yes you can earn points, receive a 5,000-point Signup Bonus for each one of your listings to give out to your guests."]}, 
+ 	 "reply": ["You can earn points at Trip TnT, you will receive a 5,000-point Signup Bonus for each one of your listings to give out to your guests."]}, 
 
  	{"intent": "point_information", 
  	 "query": ["can a guest earn points"], 
- 	 "reply": ["Yes you can earn points, receive a 5,000-point Signup Bonus for each one of your listings to give out to your guests."]}, 
+ 	 "reply": ["You can earn points at Trip TnT, you will receive a 5,000-point Signup Bonus for each one of your listings to give out to your guests."]}, 
 
  	{"intent": "point_information", 
  	 "query": ["how can a guest earn points?"], 
- 	 "reply": ["Yes you can earn points, receive a 5,000-point Signup Bonus for each one of your listings to give out to your guests."]}, 
+ 	 "reply": ["You can earn points at Trip TnT, you will receive a 5,000-point Signup Bonus for each one of your listings to give out to your guests."]}, 
 
  	{"intent": "signup_info_cleaner", 
  	 "query": ["can i sign up as a cleaner"], 
- 	 "reply": ["you need to get invited by the master cleaner"]}, 
+ 	 "reply": ["You cannot directly register as cleaner, you need to get invited by the master cleaner"]}, 
 
  	{"intent": "signup_info_cleaner", 
  	 "query": ["how can i register for the cleaner"], 
- 	 "reply": ["you need to get invited by the master cleaner"]}, 
+ 	 "reply": ["You cannot directly register as cleaner, you need to get invited by the master cleaner"]}, 
 
  	{"intent": "signup_info_cleaner", 
  	 "query": ["i want to become the cleaner how can i do that by joining?"], 
- 	 "reply": ["you need to get invited by the master cleaner"]}, 
+ 	 "reply": ["You cannot directly register as cleaner, you need to get invited by the master cleaner"]}, 
 
  	{"intent": "signup_info_cleaner", 
  	 "query": ["how do i get to be register for the cleaner"], 
- 	 "reply": ["you need to get invited by the master cleaner"]}, 
+ 	 "reply": ["You cannot directly register as cleaner, you need to get invited by the master cleaner"]}, 
 
  	{"intent": "signup_info_cleaner", 
  	 "query": ["do i get to register or signup as a cleaner"], 
- 	 "reply": ["you need to get invited by the master cleaner"]}, 
+ 	 "reply": ["You cannot directly register as cleaner, you need to get invited by the master cleaner"]}, 
 
  	{"intent": "payment_information", 
  	 "query": ["Do i need to pay to use trip tnt?"], 
- 	 "reply": ["Its free of cost"]}, 
+ 	 "reply": ["You can signup for free."]}, 
 
- 	{"intent": "payment_information", 
+ 	{"intent": "payment_gateway", 
  	 "query": ["how can i pay to the trip tnt"], 
- 	 "reply": ["Its free of cost"]}, 
+ 	 "reply": ["Currently we are using Stripe payment gateway as our primary payment method."]}, 
 
- 	{"intent": "payment_information", 
+ 	{"intent": "payment_gateway", 
  	 "query": ["how should i pay ?"], 
- 	 "reply": ["Its free of cost"]}, 
+ 	 "reply": ["Currently we are using Stripe payment gateway as our primary payment method."]}, 
 
  	{"intent": "point_information", 
  	 "query": ["Can I get points"], 
  	  "reply": ["Yes you can earn points, receive a 5,000-point Signup Bonus for each one of your listings to give out to your guests."]},
 
-    {"intent": "payment_information", 
+    {"intent": "payment_gateway", 
      "query": ["do i need to pay by cheque or by cash?"], 
-     "reply": ["Its free of cost"]}, 
+     "reply": ["Currently we are using Stripe payment gateway as our primary payment method."]}, 
 
     {"intent": "payment_information", 
-     "query": ["can i pay by check"], 
-     "reply": ["Its free of cost"]}, 
+     "query": ["is there any cost for signing up"], 
+     "reply": ["You can signup for free."]}, 
 
     {"intent": "payment_information", 
-     "query": ["what amount do i need to pay to the company"], 
-     "reply": ["Its free of cost"]}, 
+     "query": ["can i signup for free"], 
+     "reply": ["You can signup for free."]}, 
 
     {"intent": "payment_information", 
-     "query": ["what is the fee to join for this"], 
-     "reply": ["Its free of cost"]}, 
+     "query": ["what is the fee to be user"], 
+     "reply": ["You can signup for free."]}, 
 
     {"intent": "payment_information", 
-     "query": ["tell me about the fees"], 
-     "reply": ["Its free of cost"]}, 
+     "query": ["tell me about the signup fees"], 
+     "reply": ["You can signup for free."]}, 
 
     {"intent": "Thank", 
      "query": ["you helped me thank you"], 
@@ -181,11 +217,36 @@
      "query": ["I was wondering if you could change my checkout time to 6 AM"], 
      "reply": ["yes you can change your checkout time."]},
 
+    {"intent": "request_change_checkout_time", 
+     "query": ["do i need to pay for signing up "], 
+     "reply": ["yes you can change your checkout time."]},
+
+
 
  { 
   "intent": "email", 
   "query": ["what is the email address of your company"], 
-  "reply": ["the email address of our company is info@triptnt.com"]}, 
+  "reply": ["You can send the email at  <strong>info@triptnt.com.</strong><a href='mailto:info@triptnt.com'>Send Mail</a>"]},
+
+
+ { 
+  "intent": "email", 
+  "query": ["how can i mail you"], 
+  "reply": ["You can send the email at  <strong>info@triptnt.com.</strong><a href='mailto:info@triptnt.com'>Send Mail</a>"]},  
+
+{ 
+  "intent": "email", 
+  "query": ["can i get your email"], 
+  "reply": ["You can send the email at  <strong>info@triptnt.com.</strong><a href='mailto:info@triptnt.com'>Send Mail</a>"]},
+
+{ 
+  "intent": "email", 
+  "query": ["tell me your email"], 
+  "reply": ["You can send the email at  <strong>info@triptnt.com.</strong><a href='mailto:info@triptnt.com'>Send Mail</a>"]},
+{ 
+  "intent": "email", 
+  "query": ["where should i send you email"], 
+  "reply": ["You can send the email at  <strong>info@triptnt.com.</strong><a href='mailto:info@triptnt.com'>Send Mail</a>"]},  
 
 {
   "intent": "rewards", 
@@ -196,11 +257,23 @@
   "intent": "rewards", 
   "query": ["What is the policy of the rewards."], 
   "reply": ["Reward are based on the length of stay."]}, 
+{
+  "intent": "rewards", 
+  "query": ["how can i get reward."], 
+  "reply": ["Reward are based on the length of stay."]},
+{
+  "intent": "rewards", 
+  "query": ["What is the procedure of getting reward"], 
+  "reply": ["Reward are based on the length of stay."]},  
 
 {
   "intent": "cleaner", 
   "query": ["Can i register as a Cleaner?"], 
-  "reply": ["you can become cleaner through invitation only"]}, 
+  "reply": ["You can become cleaner through Master Tasker invitation only"]},
+{
+  "intent": "cleaner", 
+  "query": ["can i be the cleaner"], 
+  "reply": ["You can become cleaner through Master Tasker invitation only"]},  
 
 {
   "intent": "task", 
@@ -221,7 +294,124 @@
   "intent": "points", 
   "query": ["Do I need to buy Points?"], 
   "reply": ["Yes you need to buy points not in general but for each listing."]
-}
+},
+
+{
+    "intent": "help", 
+    "query": ["help me"], 
+    "reply": ["Please tell me how can I help you"]
+  }, 
+  {
+    "intent": "help", 
+    "query": ["i want help"], 
+    "reply": ["Please tell me how can I help you"]}, 
+  {
+    "intent": "help", 
+    "query": ["i need help"], 
+    "reply": ["Please tell me how can I help you"]
+  },
+  {
+    "intent": "help", 
+    "query": ["can you help me"], 
+    "reply": ["Please tell me how can I help you"]
+  }, 
+  {
+    "intent": "info", 
+    "query": ["what does trip tnt do"], 
+    "reply": ["We partner with the world's leading travel and technology brands to help you get more reservations"]
+  }, 
+  {
+    "intent": "info", 
+    "query": ["what do you do"], 
+    "reply": ["We partner with the world's leading travel and technology brands to help you get more reservations"]
+  },
+  {
+    "intent": "associations", 
+    "query": ["what are your associations"], 
+    "reply": ["Currently we are in association with world famous brands like <a href='https://www.airbnb.com/'>Airbnb</a>, <a href='https://www.booking.com/'>Booking.com</a>, <a href='https://www.tripadvisor.com/'>Tripadvisor</a>, <a href='https://www.expedia.com/'>Expedia</a>, <a href='https://www.hostelworld.com/'>Hostel World</a> and <a href='https://www.agoda.com/'>Agoda</a> "]
+  }, 
+  {
+    "intent": "associations", 
+    "query": ["who are you working with "], 
+    "reply": ["Currently we are in association with world famous brands like <a href='https://www.airbnb.com/'>Airbnb</a>, <a href='https://www.booking.com/'>Booking.com</a>, <a href='https://www.tripadvisor.com/'>Tripadvisor</a>, <a href='https://www.expedia.com/'>Expedia</a>, <a href='https://www.hostelworld.com/'>Hostel World</a> and <a href='https://www.agoda.com/'>Agoda</a> "]
+  }, 
+  {
+    "intent": "host_benefits", 
+    "query": ["what is the benefits of registering as host"], 
+    "reply": ["The benefits are:<br>-Receive a 5,000-point Signup Bonus for each one of your listings to give out to your guests.<br>-Receive a 250-point Referral Bonus for each guest or host you recommend that signs up....<br>For more information visit <a href='http://40.122.109.2/signup/host/'>Benefits as host</a>"]
+  }, 
+  {
+    "intent": "host_benefits", 
+    "query": ["Why should i register as host"], 
+    "reply": ["The benefits are:<br>-Receive a 5,000-point Signup Bonus for each one of your listings to give out to your guests.<br>-Receive a 250-point Referral Bonus for each guest or host you recommend that signs up....<br>For more information visit <a href='http://40.122.109.2/signup/host/'>Benefits as host</a>"]
+  }, 
+  {
+    "intent": "host_benefits", 
+    "query": ["what are the perks of signing up as host"], 
+    "reply": ["The benefits are:<br>-Receive a 5,000-point Signup Bonus for each one of your listings to give out to your guests.<br>-Receive a 250-point Referral Bonus for each guest or host you recommend that signs up....<br>For more information visit <a href='http://40.122.109.2/signup/host/'>Benefits as host</a>"]
+  }, 
+  {
+    "intent": "host_benefits", 
+    "query": ["Why should i signup  as host"], 
+    "reply": ["The benefits are:<br>-Receive a 5,000-point Signup Bonus for each one of your listings to give out to your guests.<br>-Receive a 250-point Referral Bonus for each guest or host you recommend that signs up....<br>For more information visit <a href='http://40.122.109.2/signup/host/'>Benefits as host</a>"]
+  }, 
+  {
+    "intent": "guest_benefits", 
+    "query": ["what is the benefits of registering as guest"], 
+    "reply": ["The benefits are:<br>-Free Signup<br>-Signup Bonus 5,000<br>-250 Referral Bonuses<br>-Be a part of the largest Sleeper Loyalty Program....<br>For more information visit <a href='http://40.122.109.2/signup/guest/'>Benefits as guest</a>"]
+  },
+  {
+    "intent": "guest_benefits", 
+    "query": ["why should i register as guest"], 
+    "reply": ["The benefits are:<br>-Free Signup<br>-Signup Bonus 5,000<br>-250 Referral Bonuses<br>-Be a part of the largest Sleeper Loyalty Program....<br>For more information visit <a href='http://40.122.109.2/signup/guest/'>Benefits as guest</a>"]
+  }, 
+  {
+    "intent": "guest_benefits", 
+    "query": ["what are the perks of signing up as guest"], 
+    "reply": ["The benefits are:<br>-Free Signup<br>-Signup Bonus 5,000<br>-250 Referral Bonuses<br>-Be a part of the largest Sleeper Loyalty Program....<br>For more information visit <a href='http://40.122.109.2/signup/guest/'>Benefits as guest</a>"]
+  }, 
+  {
+    "intent": "guest_benefits", 
+    "query": ["why should i signup  as guest"], 
+    "reply": ["The benefits are:<br>-Free Signup<br>-Signup Bonus 5,000<br>-250 Referral Bonuses<br>-Be a part of the largest Sleeper Loyalty Program....<br>For more information visit <a href='http://40.122.109.2/signup/guest/'>Benefits as guest</a>"]
+  }, 
+  {
+    "intent": "payment_gateway", 
+    "query": ["what are the payment method used in triptnt"], 
+    "reply": ["Currently we are using Stripe payment gateway as our primary payment method."]
+  }, 
+  {
+    "intent": "payment_gateway", 
+    "query": ["what is the payment gateway here"], 
+    "reply": ["Currently we are using Stripe payment gateway as our primary payment method."]
+  }, 
+  {
+    "intent": "payment_gateway", 
+    "query": ["how can i do payment"], 
+    "reply": ["Currently we are using Stripe payment gateway as our primary payment method."]
+  },
+
+   {
+    "intent": "payment_gateway", 
+    "query": ["do i need to pay for signing up"], 
+    "reply": ["Currently we are using Stripe payment gateway as our primary payment method."]
+  },  
+  {
+    "intent": "payment_gateway", 
+    "query": ["what payment method should i  use"], 
+    "reply": ["Currently we are using Stripe payment gateway as our primary payment method."]
+  }, 
+  {
+    "intent": "payment_gateway", 
+    "query": ["what are the available payment methods"], 
+    "reply": ["Currently we are using Stripe payment gateway as our primary payment method."]
+  },
+
+  {
+    "intent": "payment_gateway", 
+    "query": ["How can i pay for points"], 
+    "reply": ["Currently we are using Stripe payment gateway as our primary payment method."]
+  }
 
  ]
 }

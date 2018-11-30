@@ -4,6 +4,8 @@ from channels.generic.websocket import WebsocketConsumer
 import json
 
 from chat.chatModel.restaurants.learning2 import response
+from chat.chatModel.restaurants.learning2 import welcome_msg
+
 
 
 class ChatConsumer(WebsocketConsumer):
@@ -44,12 +46,15 @@ class ChatConsumer(WebsocketConsumer):
     def chat_message(self, event):
         message = event['message']
         reply = str(response(message))
+        welc_msg = welcome_msg
 
         print('hello:',reply)
         print('MSg',message)
+        print('Welcome', welc_msg)
 
         # Send message to WebSocket
         self.send(text_data=json.dumps({
             'message': message,
-            'reply':reply
+            'reply':reply,
+            'welc_msg': welc_msg
         }))

@@ -82,12 +82,14 @@ def classify(sentence):
     # return tuple of intent and probability
     return return_list
 
+welcome_msg = "Welcome to Trip TnT. I am  your assistant TnT bot at your service. Ask me your queries "
+
 def response(sentence, userID='123', show_details=False):
-    
+   
     results = classify(sentence)
     # if we have a classification then find the matching intent tag
     if results:
-        if results[0][1]>0.30:
+        if results[0][1]>0.60:
             # loop as long as there are matches to process
             while results:
                 for i in intents['intents']:

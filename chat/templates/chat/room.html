@@ -41,7 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 /* Add styles to the form container */
 .form-container2 {
-    max-width: 300px;
+    width: 300px;
     padding: 0px 10px 10px 10px;
     background-color: white;
     border: 1px solid #f95a60;
@@ -85,7 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 }
 
 #chat-message-input { 
-    border: 1px solid #bdbdbd;
+    border: 1px solid #f65e65;
     background-color: #eaeaea;
     color: #151515;
 }
@@ -95,7 +95,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     outline: none;
 }
 #chat-message-submit{
-    color: #1c61a0;
+    color: #f65e65;
+    padding: 8px;
 }
 
 
@@ -109,26 +110,62 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     opacity: 1;
 }
 
-.incoming_msg_img {
+.incoming_msg_img{
   display: inline-block;
-  width: 6%;
+  width: 7%;
+  float: left;
+  margin-top: 3px;
 }
-.incoming_msg_img  img{ max-width:100%;}
+.bot_msg_img {
+  display: inline-block;
+  width: 7%;
+  float: right;
+  margin-right: 4px;
+    margin-top: 4px;
+}
+.incoming_msg_img img, .bot_msg_img img{ max-width:100%;}
 
-.chat-message{
+/*.chat-message{
+    
+    
+}*/
+.msg-user{
+    float: left;
     background: #d6d6d6;
     border-radius: 10PX;
     padding: 5PX;
-    margin: 2PX 10PX 2PX 0PX;
     width: 76%;
+    word-break: break-word;
+    margin: 2px;
 }
 .chat-reply{
-    background: #1c61a04f;
+    background: #ec6f733d;
     width: 76%;
     float: right;
     border-radius: 10PX;
     padding:5PX;
-    margin: 2px 10px 2px 0px;
+    margin: 2px 1px 2px 0px;
+}
+.chat-popup .input-group-addon {
+    padding: unset;
+    font-size: unset;
+    line-height: unset;
+    color: unset;
+     text-align:unset; 
+     background-color:unset; 
+     border:unset; 
+     border-radius: unset; 
+}
+#bot-chat-top{
+    text-align: center;
+    padding: 10px;
+    background: #fbadaf4d;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+#bot-chat-top img{
+    width: 25%;
+    margin-bottom: 10px;
 }
 </style>
 </head>
@@ -559,12 +596,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>
     </div>
 
-    <button class="open-button" onclick="openForm()" style="background-color: #ef8e91;color: white;border: none;
+    <button class="open-button" onclick="openForm()" style="background-color: #c7343a;color: white;border: none;
     cursor: pointer;  position: fixed;  bottom: 5px;right: 80px;  width: 70px;height: 70px;   border-radius: 70px;    z-index: 1;">Chat</button>
     <div class="chat-popup form-container2" id="myForm">
         <div class="row alert alert-success" style="padding-left: 0px; padding-right: 0px;color: #eaeaea;background-color: #f65e65; border-color: #f65e65;border-radius: 0px;margin: auto -10px 10px -10px;"> 
             <div class="col-md-9 col">
-                <h5>LAMA BOT</h5>
+                <h5>TripTnT BOT</h5>
             </div>
             <div class="col-md-3 col">
                 <i class="fas fa-times pull-right" onclick="closeForm()" style="color: #eaeaea;"></i>
@@ -572,11 +609,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         </div>         
         <form method = 'POST'>           
             <div id="chatbox">
-                <div id="chatroom"></div>
+                <div id="chatroom">
+                    <div id="bot-chat-top"></div>
+                </div>
             </div>
             <div class="input-group">
                 <input type="text" id="chat-message-input" class="form-control" autocomplete="off" required>
-                <button class="fas fa-arrow-circle-right" id="chat-message-submit"></button> 
+                <div class="input-group-addon">
+                    <button class="fas fa-arrow-circle-right" id="chat-message-submit"></button> 
+                </div>
             </div>      
               
         </form>
@@ -682,6 +723,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             document.getElementById("myForm").style.display = "none";
         }
     </script>
+    <script type="text/javascript">
+    
+
+    var welc ='Welcome to Trip TnT. I am  your assistant TnT bot at your service. Ask me your queries.'; 
+    $('#bot-chat-top').append('<img src="https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2016-02-16/21555442950_7f86bfd6a0e49b7213a0_512.png" alt="img"> <br>' + welc);
+
+    setInterval(function(){
+        $('#bot-chat-top').css('display','none');
+    },60000);       
+
+    </script>
     <script>
         var roomName = {{ room_name_json }};
 
@@ -693,9 +745,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         var data = JSON.parse(e.data);
         var message = data['message'];
         var reply = data['reply'];
+        var welc = data['welc_msg']
         var x=1;
         x++;
         e.preventDefault();
+        
+        console.log(welc);
 
 
         // var add = '<div class="d-block">'+message+'</div>';
@@ -705,7 +760,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         // var sub ='div class="d-block'+reply+'</div>';
             // var x=location.hash;
-            var content = '<div class="chat-message"> <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="img"> </div>'+ message+'</div><div class="chat-reply">Bot: '+reply+'</div><div class="clearfix"></div><hr style="border-color:#fff; margin-top:10px; margin-bottom:10px;">';
+            var content = '<div class="chat-message"> <div class="incoming_msg_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="img"> </div> <div class="msg-user">'+ message+'</div></div><div class="clearfix"></div><div class="bot_msg_img"> <img src="https://s3-us-west-2.amazonaws.com/slack-files2/avatars/2016-02-16/21555442950_7f86bfd6a0e49b7213a0_512.png" alt="img"> </div> <div class="chat-reply">'+reply+'</div><div class="clearfix"></div><hr style="border-color:#fff; margin-top:10px; margin-bottom:10px;">';
              
             
             $('#chatroom').append(content);
