@@ -434,31 +434,37 @@
   {
     "intent": "reward_system", 
     "query": ["is there any rewards system for guest"], 
-    "reply": ["Yes we have special rewards system. please find the link for further information."]
+    "reply": ["Yes we have special rewards system. please find the link<a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a> for further information."]
   },
 
   {
     "intent": "reward_system", 
     "query": ["any reward systems"], 
-    "reply": ["Yes we have special rewards system. please find the link for further information."]
+    "reply": ["Yes we have special rewards system. please find the <a href='http://40.122.109.2/signup/taskmaster/'><strong>here</a> for further information."]
   },
 
   {
     "intent": "listing", 
     "query": ["how can i add my listings to triptnt"], 
-    "reply": ["Please find more information about listing here"]
+    "reply": ["Please find more information about listing here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>."]
+  },
+
+  {
+    "intent": "listing", 
+    "query": ["how can i add my listings to triptnt"], 
+    "reply": ["Please find more information about listing here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>."]
   },
 
   {
     "intent": "listing", 
     "query": ["how to add multiple listings"], 
-    "reply": ["Please find more information about listing here."]
+    "reply": ["Please find more information about listing here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>."]
   },
 
    {
     "intent": "listing", 
     "query": ["how can i add my listings"], 
-    "reply": ["Please find more information about listing here."]
+    "reply": ["Please find more information about listing here <a href='http://40.122.109.2/signup/taskmaster/'>Register as master cleaner</a>."]
   }
 
 
