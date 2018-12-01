@@ -261,6 +261,28 @@
 
 {
   "intent": "rewards", 
+  "query": ["How can i earn reward"],
+  "reply": ["Reward are based on the length of stay."]},
+
+{
+  "intent": "rewards", 
+  "query": ["How can i earn rewards"],
+  "reply": ["Reward are based on the length of stay."]},
+
+{
+  "intent": "rewards", 
+  "query": ["can i earn reward"],
+  "reply": ["Reward are based on the length of stay."]},
+
+{
+  "intent": "rewards", 
+  "query": ["How can i earn rewards"],
+  "reply": ["Reward are based on the length of stay."]},
+
+
+
+{
+  "intent": "rewards", 
   "query": ["what is reward policy"],
   "reply": ["Reward are based on the length of stay."]},
 
@@ -458,6 +480,12 @@
 
   {
     "intent": "reward_system", 
+    "query": ["tell me about the reward at tnt"], 
+    "reply": ["Yes we have special rewards system. please find the link<a href='http://40.122.109.2/signup/taskmaster/'>here</a> for further information."]
+  },
+
+  {
+    "intent": "reward_system", 
     "query": ["any reward systems"], 
     "reply": ["Yes we have special rewards system. please find the <a href='http://40.122.109.2/signup/taskmaster/'><strong>here</a> for further information."]
   },
@@ -485,6 +513,12 @@
    {
     "intent": "listing", 
     "query": ["how can i add my listings"], 
+    "reply": ["Please find more information about listing here <a href='http://40.122.109.2/signup/taskmaster/'>Listing Info</a>."]
+  
+  },
+  {
+    "intent": "listing", 
+    "query": ["can i add my listings"], 
     "reply": ["Please find more information about listing here <a href='http://40.122.109.2/signup/taskmaster/'>Listing Info</a>."]
   
   }
