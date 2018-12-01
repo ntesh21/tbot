@@ -247,11 +247,23 @@
   "intent": "email", 
   "query": ["where should i send you email"], 
   "reply": ["You can send the email at  <strong>info@triptnt.com.</strong><a href='mailto:info@triptnt.com'>Send Mail</a>"]},  
+{ 
+  "intent": "email", 
+  "query": ["what is you email"],
+  "reply": ["You can send the email at  <strong>info@triptnt.com.</strong><a href='mailto:info@triptnt.com'>Send Mail</a>"]},  
+
+
 
 {
   "intent": "rewards", 
   "query": ["How do you get rewards."], 
   "reply": ["Reward are based on the length of stay."]},
+
+{
+  "intent": "rewards", 
+  "query": ["what is reward policy"],
+  "reply": ["Reward are based on the length of stay."]},
+
 
 {
   "intent": "rewards", 
@@ -275,6 +287,11 @@
   "intent": "tasker", 
   "query": ["i want to be a tasker."], 
   "reply": ["you have to contact your taskmaster. for more information please visit here <a href='http://40.122.109.2/signup/taskmaster/'>Tasker Info</a>"]},
+{
+  "intent": "tasker", 
+  "query": ["can i be a tasker."], 
+  "reply": ["you have to contact your taskmaster. for more information please visit here <a href='http://40.122.109.2/signup/taskmaster/'>Tasker Info</a>"]},
+
 
 {
   "intent": "tasker", 
